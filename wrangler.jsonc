@@ -108,11 +108,18 @@
     }
   },
 
- // ─── Production R2 bucket ───────────────────────────────────────────
- "r2_buckets": [
-  {
-  	"binding": "MEDIA",
-  	"bucket_name": "cyberdeck-club-media"
-  }
- ]
+  // ─── Production R2 bucket ───────────────────────────────────────────
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "cyberdeck-club-media"
+    }
+  ],
+  // ─── Production KV namespace ────────────────────────────────────────
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "6ac636f9f1a64e38ac0b429b776e38bc"
+    }
+  ]
 }
