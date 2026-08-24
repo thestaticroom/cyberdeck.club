@@ -46,7 +46,7 @@ export function getAuth(cfEnv: App.Env) {
   const fromAddress = cfEnv.EMAIL_FROM
     ?? cfEnv.RESEND_FROM_ADDRESS
     ?? import.meta.env.RESEND_FROM_ADDRESS
-    ?? "cyberdeck.club <noreply@cyberdeck.club>";
+    ?? "cyberdecks.org <noreply@cyberdecks.org>";
 
   const adminEmail = (cfEnv.ADMIN_EMAIL ?? import.meta.env.ADMIN_EMAIL ?? "").toLowerCase().trim();
 
@@ -124,9 +124,9 @@ export function getAuth(cfEnv: App.Env) {
           const { data, error } = await resend.emails.send({
             from: fromAddress,
             to: email,
-            subject: "Sign in to CyberDeck.club",
+            subject: "Sign in to CyberDecks.org",
             html: `
-              <h1>Sign in to CyberDeck.club</h1>
+              <h1>Sign in to CyberDecks.org</h1>
               <p>Click the link below to sign in to your account:</p>
               <p><a href="${url}">${url}</a></p>
               <p>This link will expire in 5 minutes.</p>
