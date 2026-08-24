@@ -200,7 +200,7 @@ export function getAuth(cfEnv: App.Env) {
       },
     },
 baseURL: "https://cyberdecks.org",
-trustedOrigins: ["https://cyberdecks.org"],
+trustedOrigins: ["https://cyberdecks.org", "https://cyberdecks.org/"],
     secret: cfEnv.BETTER_AUTH_SECRET ?? import.meta.env.BETTER_AUTH_SECRET,
   });
 
