@@ -6,7 +6,7 @@
 	],
 
 	// ─── Deployment note ────────────────────────────────────────────────
-	// The Astro Cloudflare adapter generates dist/server/wrangler.json
+	// The Astro Cloudflare adapter generates dist/server/wrangler.json 
 	// with the correct "main" and "assets" fields after `astro build`.
 	// All deploy commands must use: --config dist/server/wrangler.json
 	// Do NOT add "main" or "assets" here — it breaks the build.
