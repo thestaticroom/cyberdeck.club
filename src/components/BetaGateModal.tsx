@@ -335,7 +335,7 @@ export function BetaGateModal({ isAuthenticated }: BetaGateModalProps) {
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({
                 email: formData.email.toLowerCase().trim(),
-                callbackURL: siteUrl,
+                callbackURL: "/",
               }),
             });
 
