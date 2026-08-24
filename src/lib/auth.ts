@@ -199,10 +199,8 @@ export function getAuth(cfEnv: App.Env) {
         },
       },
     },
-    baseURL: cfEnv.PUBLIC_BASE_URL ?? import.meta.env.PUBLIC_BASE_URL ?? "http://localhost:8787",
-    trustedOrigins: [
-      cfEnv.PUBLIC_BASE_URL ?? import.meta.env.PUBLIC_BASE_URL ?? "http://localhost:8787",
-    ],
+baseURL: "https://cyberdecks.org",
+trustedOrigins: ["https://cyberdecks.org"],
     secret: cfEnv.BETTER_AUTH_SECRET ?? import.meta.env.BETTER_AUTH_SECRET,
   });
 
