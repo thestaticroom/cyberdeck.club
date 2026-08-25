@@ -4,89 +4,89 @@
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-/* Light mode (default) */
+/* ============================================
+   SEMANTIC TOKENS (The Wiring)
+   ============================================ */
+
+/* Light mode — High contrast, harsh terminal vibes */
 :root,
 [data-theme="light"] {
   --bg:           var(--color-surface-50);
   --surface:      var(--color-surface-100);
-  --surface-alt:  var(--color-secondary-100);
-  --text:         var(--color-ink-800);
-  --text-muted:   var(--color-ink-600);
+  --surface-alt:  var(--color-surface-200);
+  --text:         var(--color-ink-900);
+  --text-muted:   var(--color-ink-700);
   --text-inverse: var(--color-surface-50);
   --border:       var(--color-ink-900);
-  --focus:        var(--color-secondary-600);
+  --focus:        var(--color-accent-500); /* Acid green focus */
   --shadow-hard:  var(--color-ink-900);
-  --link:         var(--color-primary-700);
-  --link-hover:   var(--color-primary-600);
+  --link:         var(--color-secondary-700); /* Cyan */
+  --link-hover:   var(--color-primary-600); /* Magenta */
 }
 
-/* Dark mode — femme-coded, NOT terminal-coded */
+/* Dark mode — Deep void, neon accents, glitchy */
 [data-theme="dark"] {
   --bg:           var(--color-surface-950);
-  --surface:      var(--color-secondary-950);
-  --surface-alt:  var(--color-ink-800);
+  --surface:      var(--color-surface-900);
+  --surface-alt:  var(--color-surface-800);
   --text:         var(--color-surface-100);
   --text-muted:   var(--color-surface-400);
-  --text-inverse: var(--color-ink-900);
-  --border:       var(--color-surface-100);
-  --focus:        var(--color-primary-400);
-  --shadow-hard:  var(--color-surface-100);
-  --link:         var(--color-primary-400);
-  --link-hover:   var(--color-primary-300);
+  --text-inverse: var(--color-surface-950);
+  --border:       var(--color-primary-500); /* Magenta borders */
+  --focus:        var(--color-accent-400);
+  --shadow-hard:  var(--color-primary-500);
+  --link:         var(--color-secondary-400); /* Neon Cyan */
+  --link-hover:   var(--color-accent-400); /* Acid Green */
 }
 
-/* Tailwind Typography prose overrides
-   These MUST target .prose directly (not an ancestor) so they override
-   the hardcoded oklch values that @tailwindcss/typography sets on .prose.
-   CSS custom properties set on an element beat values inherited from ancestors. */
-
-/* Light mode prose — plum-based ink palette instead of Tailwind's default gray */
+/* ============================================
+   PROSE OVERRIDES (Wiki/Markdown content)
+   ============================================ */
 :root .prose,
 [data-theme="light"] .prose {
-  --tw-prose-body:            var(--color-ink-800);
-  --tw-prose-headings:        var(--color-ink-900);
-  --tw-prose-lead:            var(--color-ink-600);
-  --tw-prose-links:           var(--color-primary-700);
+  --tw-prose-body:            var(--color-ink-900);
+  --tw-prose-headings:        var(--color-primary-700);
+  --tw-prose-lead:            var(--color-ink-700);
+  --tw-prose-links:           var(--color-secondary-700);
   --tw-prose-bold:            var(--color-ink-900);
-  --tw-prose-counters:        var(--color-ink-600);
-  --tw-prose-bullets:         var(--color-ink-600);
-  --tw-prose-hr:              var(--color-ink-200);
+  --tw-prose-counters:        var(--color-accent-600);
+  --tw-prose-bullets:         var(--color-primary-500);
+  --tw-prose-hr:              var(--color-ink-300);
   --tw-prose-quotes:          var(--color-ink-800);
-  --tw-prose-quote-borders:   var(--color-secondary-400);
+  --tw-prose-quote-borders:   var(--color-secondary-500);
   --tw-prose-captions:        var(--color-ink-600);
-  --tw-prose-kbd:             var(--color-ink-800);
+  --tw-prose-kbd:             var(--color-ink-900);
   --tw-prose-kbd-shadows:     0 0 0;
-  --tw-prose-code:            var(--color-ink-800);
-  --tw-prose-pre-code:        var(--color-ink-200);
-  --tw-prose-pre-bg:          var(--color-ink-900);
+  --tw-prose-code:            var(--color-primary-700);
+  --tw-prose-pre-code:        var(--color-accent-300);
+  --tw-prose-pre-bg:          var(--color-ink-950);
   --tw-prose-th-borders:      var(--color-ink-300);
   --tw-prose-td-borders:      var(--color-ink-200);
 }
 
-/* Dark mode prose — light text on dark surfaces */
 [data-theme="dark"] .prose {
-  --tw-prose-body:            var(--color-surface-100);
-  --tw-prose-headings:        var(--color-surface-100);
-  --tw-prose-lead:            var(--color-surface-300);
-  --tw-prose-links:           var(--color-primary-400);
+  --tw-prose-body:            var(--color-surface-200);
+  --tw-prose-headings:        var(--color-primary-400); /* Magenta headings */
+  --tw-prose-lead:            var(--color-surface-400);
+  --tw-prose-links:           var(--color-secondary-400); /* Cyan links */
   --tw-prose-bold:            var(--color-surface-100);
-  --tw-prose-counters:        var(--color-surface-400);
-  --tw-prose-bullets:         var(--color-surface-400);
-  --tw-prose-hr:              var(--color-surface-400);
-  --tw-prose-quotes:          var(--color-surface-200);
-  --tw-prose-quote-borders:   var(--color-secondary-600);
-  --tw-prose-captions:        var(--color-surface-400);
+  --tw-prose-counters:        var(--color-accent-400);
+  --tw-prose-bullets:         var(--color-primary-500);
+  --tw-prose-hr:              var(--color-surface-700);
+  --tw-prose-quotes:          var(--color-surface-300);
+  --tw-prose-quote-borders:   var(--color-accent-500); /* Green quote borders */
+  --tw-prose-captions:        var(--color-surface-500);
   --tw-prose-kbd:             var(--color-surface-100);
   --tw-prose-kbd-shadows:     0 0 0;
-  --tw-prose-code:            var(--color-surface-100);
-  --tw-prose-pre-code:        var(--color-surface-200);
-  --tw-prose-pre-bg:          var(--color-ink-800);
-  --tw-prose-th-borders:      var(--color-surface-400);
-  --tw-prose-td-borders:      var(--color-surface-600);
+  --tw-prose-code:            var(--color-accent-400); /* Green code */
+  --tw-prose-pre-code:        var(--color-secondary-300);
+  --tw-prose-pre-bg:          var(--color-surface-950);
+  --tw-prose-th-borders:      var(--color-surface-700);
+  --tw-prose-td-borders:      var(--color-surface-800);
 }
 
 @theme inline {
-  /* Semantic tokens */
+  /* Semantic tokens mapping */
   --color-bg:          var(--bg);
   --color-surface:     var(--surface);
   --color-surface-alt: var(--surface-alt);
@@ -99,12 +99,12 @@
   --color-link:        var(--link);
   --color-link-hover:  var(--link-hover);
 
-  /* Legacy/component variables for backward compatibility */
+  /* Legacy/component variables */
   --color-surface-light:  var(--color-surface-100);
   --color-surface-dark:   var(--color-surface-900);
   --color-border-light:   var(--color-ink-900);
   --color-border-dark:    var(--color-surface-100);
-  --color-text-light:     var(--color-ink-800);
+  --color-text-light:     var(--color-ink-900);
   --color-text-dark:      var(--color-surface-100);
   --color-bg-dark:        var(--color-surface-950);
   --color-primary-hover:  var(--color-primary-500);
@@ -118,80 +118,79 @@
 
 @theme {
   /* ============================================
-     PALETTE RAMPS — cyberdeck.club Design System
-     See DESIGN.md §2.2 for full documentation
+     PALETTE RAMPS — CYBERDECKS.ORG (QUEER/GLITCH)
      ============================================ */
 
-  /* === PRIMARY — coral-pink, hue ~14–22 === */
-  --color-primary-50:  oklch(0.971 0.013 17);
-  --color-primary-100: oklch(0.936 0.038 15);
-  --color-primary-200: oklch(0.885 0.075 14);
-  --color-primary-300: oklch(0.808 0.130 14);
-  --color-primary-400: oklch(0.722 0.190 16);
-  --color-primary-500: oklch(0.660 0.220 18);
-  --color-primary-600: oklch(0.590 0.230 20);
-  --color-primary-700: oklch(0.510 0.205 22);
-  --color-primary-800: oklch(0.445 0.175 22);
-  --color-primary-900: oklch(0.395 0.140 22);
-  --color-primary-950: oklch(0.260 0.092 24);
+  /* === PRIMARY — HOT MAGENTA (Hue ~325) === */
+  --color-primary-50:  oklch(0.97 0.02 325);
+  --color-primary-100: oklch(0.93 0.05 325);
+  --color-primary-200: oklch(0.86 0.12 325);
+  --color-primary-300: oklch(0.78 0.20 325);
+  --color-primary-400: oklch(0.72 0.26 325);
+  --color-primary-500: oklch(0.65 0.28 325);
+  --color-primary-600: oklch(0.58 0.26 325);
+  --color-primary-700: oklch(0.50 0.22 325);
+  --color-primary-800: oklch(0.42 0.18 325);
+  --color-primary-900: oklch(0.35 0.14 325);
+  --color-primary-950: oklch(0.25 0.08 325);
 
-  /* === SECONDARY — lavender / lilac, hue ~300–305 === */
-  --color-secondary-50:  oklch(0.977 0.014 305);
-  --color-secondary-100: oklch(0.946 0.033 305);
-  --color-secondary-200: oklch(0.902 0.063 305);
-  --color-secondary-300: oklch(0.827 0.110 305);
-  --color-secondary-400: oklch(0.738 0.165 302);
-  --color-secondary-500: oklch(0.660 0.205 300);
-  --color-secondary-600: oklch(0.572 0.235 300);
-  --color-secondary-700: oklch(0.496 0.215 302);
-  --color-secondary-800: oklch(0.438 0.180 304);
-  --color-secondary-900: oklch(0.385 0.145 305);
-  --color-secondary-950: oklch(0.270 0.110 305);
+  /* === SECONDARY — NEON CYAN (Hue ~200) === */
+  --color-secondary-50:  oklch(0.97 0.02 200);
+  --color-secondary-100: oklch(0.94 0.05 200);
+  --color-secondary-200: oklch(0.88 0.10 200);
+  --color-secondary-300: oklch(0.82 0.16 200);
+  --color-secondary-400: oklch(0.78 0.20 200);
+  --color-secondary-500: oklch(0.75 0.22 200);
+  --color-secondary-600: oklch(0.68 0.20 200);
+  --color-secondary-700: oklch(0.58 0.18 200);
+  --color-secondary-800: oklch(0.48 0.15 200);
+  --color-secondary-900: oklch(0.38 0.12 200);
+  --color-secondary-950: oklch(0.28 0.08 200);
 
-  /* === ACCENT — honey / warm gold, hue ~78–95 === */
-  --color-accent-50:  oklch(0.987 0.022 95);
-  --color-accent-100: oklch(0.962 0.058 95);
-  --color-accent-200: oklch(0.924 0.115 92);
-  --color-accent-300: oklch(0.878 0.165 90);
-  --color-accent-400: oklch(0.828 0.185 86);
-  --color-accent-500: oklch(0.770 0.180 82);
-  --color-accent-600: oklch(0.665 0.175 75);
-  --color-accent-700: oklch(0.555 0.150 68);
-  --color-accent-800: oklch(0.475 0.125 62);
-  --color-accent-900: oklch(0.415 0.105 58);
-  --color-accent-950: oklch(0.285 0.075 55);
+  /* === ACCENT — ACID GREEN / TERMINAL (Hue ~140) === */
+  --color-accent-50:  oklch(0.97 0.02 140);
+  --color-accent-100: oklch(0.94 0.06 140);
+  --color-accent-200: oklch(0.88 0.14 140);
+  --color-accent-300: oklch(0.82 0.20 140);
+  --color-accent-400: oklch(0.78 0.24 140);
+  --color-accent-500: oklch(0.75 0.26 140);
+  --color-accent-600: oklch(0.68 0.24 140);
+  --color-accent-700: oklch(0.58 0.20 140);
+  --color-accent-800: oklch(0.48 0.16 140);
+  --color-accent-900: oklch(0.38 0.12 140);
+  --color-accent-950: oklch(0.28 0.08 140);
 
-  /* === SURFACE — cream / warm-white, hue ~75–80 === */
-  --color-surface-50:  oklch(0.985 0.008 80);
-  --color-surface-100: oklch(0.965 0.014 80);
-  --color-surface-200: oklch(0.928 0.020 78);
-  --color-surface-300: oklch(0.875 0.024 76);
-  --color-surface-400: oklch(0.760 0.028 74);
-  --color-surface-500: oklch(0.620 0.030 72);
-  --color-surface-600: oklch(0.500 0.032 70);
-  --color-surface-700: oklch(0.395 0.035 65);
-  --color-surface-800: oklch(0.310 0.038 60);
-  --color-surface-900: oklch(0.235 0.040 50);
-  --color-surface-950: oklch(0.165 0.042 40);
+  /* === SURFACE — DEEP VOID BLACK (Hue ~260) === */
+  --color-surface-50:  oklch(0.98 0.01 260);
+  --color-surface-100: oklch(0.95 0.02 260);
+  --color-surface-200: oklch(0.90 0.03 260);
+  --color-surface-300: oklch(0.80 0.04 260);
+  --color-surface-400: oklch(0.65 0.05 260);
+  --color-surface-500: oklch(0.50 0.06 260);
+  --color-surface-600: oklch(0.40 0.07 260);
+  --color-surface-700: oklch(0.30 0.08 260);
+  --color-surface-800: oklch(0.20 0.08 260);
+  --color-surface-900: oklch(0.15 0.06 260);
+  --color-surface-950: oklch(0.10 0.05 260);
 
-  /* === INK — deep plum (NEVER pure black), hue ~350–358 === */
-  --color-ink-50:  oklch(0.972 0.008 355);
-  --color-ink-100: oklch(0.930 0.014 355);
-  --color-ink-200: oklch(0.870 0.022 354);
-  --color-ink-300: oklch(0.770 0.030 352);
-  --color-ink-400: oklch(0.610 0.045 350);
-  --color-ink-500: oklch(0.460 0.060 350);
-  --color-ink-600: oklch(0.360 0.072 350);
-  --color-ink-700: oklch(0.280 0.078 352);
-  --color-ink-800: oklch(0.220 0.075 354);
-  --color-ink-900: oklch(0.170 0.065 355);
-  --color-ink-950: oklch(0.120 0.045 358);
+  /* === INK — STARK OFF-WHITE / VOID (Hue ~260) === */
+  --color-ink-50:  oklch(0.98 0.01 260);
+  --color-ink-100: oklch(0.95 0.02 260);
+  --color-ink-200: oklch(0.90 0.03 260);
+  --color-ink-300: oklch(0.80 0.04 260);
+  --color-ink-400: oklch(0.65 0.05 260);
+  --color-ink-500: oklch(0.50 0.06 260);
+  --color-ink-600: oklch(0.40 0.07 260);
+  --color-ink-700: oklch(0.30 0.08 260);
+  --color-ink-800: oklch(0.20 0.08 260);
+  --color-ink-900: oklch(0.15 0.06 260);
+  --color-ink-950: oklch(0.10 0.05 260);
 
-  /* === STATUS (closed set) === */
-  --color-signal:  oklch(0.72 0.17 155);
-  --color-warn:    oklch(0.75 0.16 65);
-  --color-danger:  oklch(0.58 0.22 18);
-  --color-info:    oklch(0.65 0.14 260);
+  /* === STATUS === */
+  --color-signal:  oklch(0.75 0.25 140); /* Acid Green */
+  --color-warn:    oklch(0.80 0.20 90);  /* Neon Yellow */
+  --color-danger:  oklch(0.65 0.28 15);  /* Blood Red */
+  --color-info:    oklch(0.75 0.20 200); /* Cyan */
 
   /* ============================================
      TYPOGRAPHY
@@ -201,7 +200,7 @@
   --font-mono:    "JetBrains Mono", ui-monospace, monospace;
   --font-pixel:   "Departure Mono", monospace;
 
-  /* === FLUID TYPE SCALE (16px base, 1.25 ratio) === */
+  /* === FLUID TYPE SCALE === */
   --fs-eyebrow: 0.6875rem;
   --fs-small:   0.8125rem;
   --fs-body:    1rem;
@@ -212,16 +211,12 @@
   --fs-h1:      clamp(3rem, 7vw, 6rem);
 
   /* ============================================
-     BORDER RADIUS
+     BORDER RADIUS & SHADOWS
      ============================================ */
   --radius-sm:   0.25rem;
   --radius-md:   0.5rem;
   --radius-full: 9999px;
 
-  /* ============================================
-     HARD OFFSET SHADOWS — neobrutalist tell
-     NEVER use soft/blurred shadows
-     ============================================ */
   --shadow-brut-sm:      3px 3px 0 0 var(--shadow-hard);
   --shadow-brut:         4px 4px 0 0 var(--shadow-hard);
   --shadow-brut-lg:      6px 6px 0 0 var(--shadow-hard);
@@ -240,56 +235,52 @@
 /* ============================================
    BASE STYLES
    ============================================ */
-
 :root {
   font-family: var(--font-sans);
 }
 
 ::selection {
-  background-color: var(--color-primary-300);
-  color: var(--color-ink-900);
+  background-color: var(--color-primary-500);
+  color: var(--color-surface-950);
 }
 
 /* ============================================
    CUSTOM SCROLLBAR
    ============================================ */
-
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-surface-100);
+  background: var(--color-surface-900);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-secondary-400);
+  background: var(--color-secondary-600);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-primary-400);
+  background: var(--color-primary-500);
 }
 
 /* ============================================
    ACCESSIBILITY - FOCUS STATES
    ============================================ */
-
 *:focus-visible {
   outline: none;
   ring: 2px solid var(--focus);
   ring-offset: 2px;
 }
 
-/* Skip to content link for screen readers */
 .skip-link {
   position: absolute;
   top: -100%;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--color-primary-600);
-  color: var(--color-ink-950);
+  background: var(--color-accent-500);
+  color: var(--color-surface-950);
   padding: 0.5rem 1rem;
   z-index: 1000;
   font-weight: 600;
@@ -305,21 +296,13 @@
 /* ============================================
    SMOOTH THEME TRANSITIONS
    ============================================ */
-
-html {
-  transition: background-color 200ms ease, color 200ms ease;
-}
-
-body {
+html, body {
   transition: background-color 200ms ease, color 200ms ease;
 }
 
 /* ============================================
    DECORATIVE BACKGROUND PATTERNS
-   Grid, glows, and floating shapes
    ============================================ */
-
-/* Subtle dot grid pattern */
 .bg-grid {
   position: fixed;
   inset: 0;
@@ -327,23 +310,22 @@ body {
   pointer-events: none;
   background-image: radial-gradient(
     circle,
-    var(--color-ink-200) 1px,
+    var(--color-surface-700) 1px,
     transparent 1px
   );
   background-size: 32px 32px;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 [data-theme="dark"] .bg-grid {
   background-image: radial-gradient(
     circle,
-    var(--color-ink-600) 1px,
+    var(--color-surface-800) 1px,
     transparent 1px
   );
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
-/* Glow effects */
 .bg-glow {
   position: fixed;
   z-index: 0;
@@ -358,7 +340,7 @@ body {
   height: 600px;
   top: -200px;
   right: -200px;
-  background: var(--color-primary-300);
+  background: var(--color-primary-600);
 }
 
 .bg-glow-2 {
@@ -366,20 +348,19 @@ body {
   height: 400px;
   bottom: -100px;
   left: -100px;
-  background: var(--color-secondary-300);
+  background: var(--color-secondary-600);
 }
 
 [data-theme="dark"] .bg-glow-1 {
-  background: var(--color-primary-700);
-  opacity: 0.1;
+  background: var(--color-primary-500);
+  opacity: 0.2;
 }
 
 [data-theme="dark"] .bg-glow-2 {
-  background: var(--color-secondary-700);
-  opacity: 0.1;
+  background: var(--color-secondary-500);
+  opacity: 0.2;
 }
 
-/* Floating decorative shapes */
 .floating-elements {
   position: fixed;
   inset: 0;
@@ -394,7 +375,7 @@ body {
 }
 
 [data-theme="dark"] .floating-shape {
-  opacity: 0.05;
+  opacity: 0.1;
 }
 
 .shape-1 {
@@ -402,7 +383,7 @@ body {
   height: 120px;
   top: 15%;
   left: 10%;
-  background: var(--color-primary-400);
+  background: var(--color-primary-500);
   transform: rotate(15deg);
   animation: float1 20s ease-in-out infinite;
 }
@@ -412,7 +393,7 @@ body {
   height: 80px;
   top: 60%;
   right: 15%;
-  background: var(--color-secondary-400);
+  background: var(--color-secondary-500);
   border-radius: 50%;
   transform: rotate(-20deg);
   animation: float2 25s ease-in-out infinite;
@@ -423,7 +404,7 @@ body {
   height: 60px;
   bottom: 20%;
   left: 20%;
-  background: var(--color-accent-400);
+  background: var(--color-accent-500);
   transform: rotate(45deg);
   animation: float3 18s ease-in-out infinite;
 }
@@ -433,7 +414,7 @@ body {
   height: 100px;
   top: 40%;
   right: 8%;
-  background: var(--color-primary-300);
+  background: var(--color-primary-400);
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   transform: rotate(-10deg);
   animation: float4 22s ease-in-out infinite;
@@ -460,10 +441,8 @@ body {
 }
 
 /* ============================================
-   PROSE / TYPOGRAPHY — link styles for rendered
-   markdown content (wiki, forum, builds, etc.)
+   PROSE / TYPOGRAPHY — link styles
    ============================================ */
-
 .prose a:not(.not-prose a) {
   color: var(--color-link);
   font-weight: 600;

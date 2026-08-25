@@ -308,7 +308,7 @@
 }
 
 [data-theme="dark"] .shared-markdown-editor [class*="contentEditable"] th {
-  background: var(--color-secondary-800);
+  background: var(--color-surface-800);
 }
 
 /* --- Inline Code --- */
@@ -520,11 +520,6 @@
    our CSS variables (--bg, --surface, --text, etc.)
    already switch values under [data-theme="dark"]
    ============================================ */
-
-[data-theme="dark"] .shared-markdown-editor {
-  --border: var(--color-surface-100);
-  --shadow-hard: var(--color-surface-100);
-}
 
 [data-theme="dark"] .shared-markdown-editor .cm-editor .cm-selectionBackground,
 [data-theme="dark"] .shared-markdown-editor .cm-editor .cm-content ::selection {
