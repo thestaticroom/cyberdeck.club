@@ -127,54 +127,54 @@ if (user && db) {
 </div>
 
 <style>
-  /* Light mode nav styles */
-  .nav-bar {
-    background-color: var(--color-surface-light);
-    border-color: var(--color-border-light);
-  }
+/* Light mode nav styles */
+.nav-bar {
+  background-color: var(--bg);
+  border-color: var(--border);
+}
 
-  .nav-logo,
-  .nav-link {
-    color: var(--color-text-light);
-  }
+.nav-logo,
+.nav-link {
+  color: var(--text);
+}
 
-  .logo-text {
-    font-weight: 700;
-    letter-spacing: -0.02em;
-  }
+.logo-text {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
 
-  .logo-dot-club {
-    color: var(--color-primary);
-  }
+.logo-dot-club {
+  color: var(--color-primary-500);
+}
 
-  .nav-toggle,
-  .nav-search {
-    color: var(--color-text-light);
-  }
+.nav-toggle,
+.nav-search {
+  color: var(--text);
+}
 
-  .nav-content {
-    background-color: var(--color-surface-light);
-  }
+.nav-content {
+  background-color: var(--bg);
+}
 
-  /* Dark mode nav styles */
-  :global([data-theme="dark"]) .nav-bar {
-    background-color: var(--color-surface-dark);
-    border-color: var(--color-border-dark);
-  }
+/* Dark mode nav styles */
+:global([data-theme="dark"]) .nav-bar {
+  background-color: var(--bg);
+  border-color: var(--border);
+}
 
-  :global([data-theme="dark"]) .nav-logo,
-  :global([data-theme="dark"]) .nav-link {
-    color: var(--color-text-dark);
-  }
+:global([data-theme="dark"]) .nav-logo,
+:global([data-theme="dark"]) .nav-link {
+  color: var(--text);
+}
 
-  :global([data-theme="dark"]) .nav-toggle,
-  :global([data-theme="dark"]) .nav-search {
-    color: var(--color-text-dark);
-  }
+:global([data-theme="dark"]) .nav-toggle,
+:global([data-theme="dark"]) .nav-search {
+  color: var(--text);
+}
 
-  :global([data-theme="dark"]) .nav-content {
-    background-color: var(--color-surface-dark);
-  }
+:global([data-theme="dark"]) .nav-content {
+  background-color: var(--bg);
+}
 
   /* Hover states */
   .nav-link:hover,
@@ -192,7 +192,7 @@ if (user && db) {
   /* Admin button */
   .nav-admin-link {
     background-color: var(--color-secondary);
-    color: white;
+    color: var(--text-inverse);
     border: 2px solid var(--color-secondary);
   }
 
