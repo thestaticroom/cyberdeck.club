@@ -195,7 +195,7 @@
 
   /* ============================================
   /* === TYPOGRAPHY === */
-  --font-display: "VT323", monospace; /* <-- Changed this line */
+  --font-display: "VT323", monospace;
   --font-sans:    "General Sans", system-ui, sans-serif;
   --font-mono:    "JetBrains Mono", ui-monospace, monospace;
   --font-pixel:   "Departure Mono", monospace;
