@@ -8,35 +8,35 @@
    SEMANTIC TOKENS (The Wiring)
    ============================================ */
 
-/* Light mode — High contrast, harsh terminal vibes */
+/* Light mode — "Gritty Terminal" */
 :root,
 [data-theme="light"] {
-  --bg:           var(--color-surface-50);
-  --surface:      var(--color-surface-100);
-  --surface-alt:  var(--color-surface-200);
-  --text:         var(--color-ink-900);
-  --text-muted:   var(--color-ink-700);
-  --text-inverse: var(--color-surface-50);
-  --border:       var(--color-ink-900);
-  --focus:        var(--color-accent-500); /* Acid green focus */
-  --shadow-hard:  var(--color-ink-900);
-  --link:         var(--color-secondary-700); /* Cyan */
-  --link-hover:   var(--color-primary-600); /* Magenta */
+  --bg:           #f5f5f5; /* Warm off-white, kills the institution vibe */
+  --surface:      #ffffff;
+  --surface-alt:  #e5e5e5;
+  --text:         #171717;
+  --text-muted:   #525252;
+  --text-inverse: #ffffff;
+  --border:       #171717; /* Hard black borders */
+  --focus:        var(--color-accent-600);
+  --shadow-hard:  #171717;
+  --link:         var(--color-secondary-700);
+  --link-hover:   var(--color-primary-700);
 }
 
-/* Dark mode — Deep void, neon accents, glitchy */
+/* Dark mode — "True Void" with Neon Borders */
 [data-theme="dark"] {
-  --bg:           var(--color-surface-950);
-  --surface:      var(--color-surface-900);
-  --surface-alt:  var(--color-surface-800);
-  --text:         var(--color-surface-100);
-  --text-muted:   var(--color-surface-400);
-  --text-inverse: var(--color-surface-950);
-  --border:       var(--color-primary-500); /* Magenta borders */
+  --bg:           #000000; /* Absolute true black. No navy. */
+  --surface:      #0a0a0a; /* Near black for cards */
+  --surface-alt:  #111111;
+  --text:         #e5e5e5;
+  --text-muted:   #737373;
+  --text-inverse: #000000;
+  --border:       var(--color-primary-500); /* FORCE Neon Magenta borders */
   --focus:        var(--color-accent-400);
-  --shadow-hard:  var(--color-primary-500);
-  --link:         var(--color-secondary-400); /* Neon Cyan */
-  --link-hover:   var(--color-accent-400); /* Acid Green */
+  --shadow-hard:  #000000;
+  --link:         var(--color-secondary-400);
+  --link-hover:   var(--color-primary-400);
 }
 
 /* ============================================
@@ -160,31 +160,31 @@
   --color-accent-900: oklch(0.38 0.12 140);
   --color-accent-950: oklch(0.28 0.08 140);
 
-  /* === SURFACE — DEEP VOID BLACK (Hue ~260) === */
-  --color-surface-50:  oklch(0.98 0.01 260);
-  --color-surface-100: oklch(0.95 0.02 260);
-  --color-surface-200: oklch(0.90 0.03 260);
-  --color-surface-300: oklch(0.80 0.04 260);
-  --color-surface-400: oklch(0.65 0.05 260);
-  --color-surface-500: oklch(0.50 0.06 260);
-  --color-surface-600: oklch(0.40 0.07 260);
-  --color-surface-700: oklch(0.30 0.08 260);
-  --color-surface-800: oklch(0.20 0.08 260);
-  --color-surface-900: oklch(0.15 0.06 260);
-  --color-surface-950: oklch(0.10 0.05 260);
+  /* === SURFACE — NEUTRAL GRAYSCALE (No Navy) === */
+  --color-surface-50:  oklch(0.98 0.01 0);
+  --color-surface-100: oklch(0.95 0.02 0);
+  --color-surface-200: oklch(0.90 0.03 0);
+  --color-surface-300: oklch(0.80 0.04 0);
+  --color-surface-400: oklch(0.65 0.05 0);
+  --color-surface-500: oklch(0.50 0.06 0);
+  --color-surface-600: oklch(0.40 0.07 0);
+  --color-surface-700: oklch(0.30 0.08 0);
+  --color-surface-800: oklch(0.20 0.08 0);
+  --color-surface-900: oklch(0.15 0.06 0);
+  --color-surface-950: oklch(0.10 0 0); /* Pure neutral dark */
 
-  /* === INK — STARK OFF-WHITE / VOID (Hue ~260) === */
-  --color-ink-50:  oklch(0.98 0.01 260);
-  --color-ink-100: oklch(0.95 0.02 260);
-  --color-ink-200: oklch(0.90 0.03 260);
-  --color-ink-300: oklch(0.80 0.04 260);
-  --color-ink-400: oklch(0.65 0.05 260);
-  --color-ink-500: oklch(0.50 0.06 260);
-  --color-ink-600: oklch(0.40 0.07 260);
-  --color-ink-700: oklch(0.30 0.08 260);
-  --color-ink-800: oklch(0.20 0.08 260);
-  --color-ink-900: oklch(0.15 0.06 260);
-  --color-ink-950: oklch(0.10 0.05 260);
+  /* === INK — NEUTRAL GRAYSCALE (No Navy) === */
+  --color-ink-50:  oklch(0.98 0.01 0);
+  --color-ink-100: oklch(0.95 0.02 0);
+  --color-ink-200: oklch(0.90 0.03 0);
+  --color-ink-300: oklch(0.80 0.04 0);
+  --color-ink-400: oklch(0.65 0.05 0);
+  --color-ink-500: oklch(0.50 0.06 0);
+  --color-ink-600: oklch(0.40 0.07 0);
+  --color-ink-700: oklch(0.30 0.08 0);
+  --color-ink-800: oklch(0.20 0.08 0);
+  --color-ink-900: oklch(0.15 0.06 0);
+  --color-ink-950: oklch(0.10 0 0); /* Pure neutral dark */
 
   /* === STATUS === */
   --color-signal:  oklch(0.75 0.25 140); /* Acid Green */
