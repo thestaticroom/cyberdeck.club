@@ -2,14 +2,14 @@
 
 ## Overview
 
-cyberdeck.club uses a GitHub Actions workflow for CI/CD deployment to **Cloudflare Workers**. The project uses Astro with the Cloudflare adapter, deploying via `wrangler deploy`.
+cyberdecks.org uses a GitHub Actions workflow for CI/CD deployment to **Cloudflare Workers**. The project uses Astro with the Cloudflare adapter, deploying via `wrangler deploy`.
 
 ## Environments
 
 | Environment | Worker Name | URL | Trigger | Wrangler Config |
 |-------------|------------|-----|---------|-----------------|
-| **Beta** | `cyberdeck-club-beta` | https://beta.cyberdeck.club | Push to `main` | `env.beta` |
-| **Production** | `cyberdeck-club` | https://cyberdeck.club | Manual workflow dispatch | Top-level |
+| **Beta** | `cyberdeck-club-beta` | https://beta.cyberdecks.org | Push to `main` | `env.beta` |
+| **Production** | `cyberdeck-club` | https://cyberdecks.org | Manual workflow dispatch | Top-level |
 
 ### How Workers Environments Work
 
@@ -30,15 +30,15 @@ Each Worker has its own:
 flowchart LR
     A[Push to main] --> B{Build Job}
     B --> C[Deploy Beta]
-    C --> D[cyberdeck-club-beta]
-    D --> E[beta.cyberdeck.club]
+    C --> D[cyberdecks-beta]
+    D --> E[beta.cyberdecks.org]
     
     F[Workflow Dispatch] --> B
     F --> G{Environment?}
     G -->|beta| C
     G -->|prod| H[Deploy Prod]
-    H --> I[cyberdeck-club]
-    I --> J[cyberdeck.club]
+    H --> I[cyberdecks]
+    I --> J[cyberdecks.org]
 ```
 
 ## Prerequisites
@@ -88,8 +88,8 @@ Configure custom domains for each Worker in the Cloudflare dashboard:
 
 | Worker | Custom Domain |
 |--------|--------------|
-| `cyberdeck-club` | `cyberdeck.club` |
-| `cyberdeck-club-beta` | `beta.cyberdeck.club` |
+| `cyberdecks` | `cyberdecks.org` |
+| `cyberdecks-beta` | `beta.cyberdecks.org` |
 
 **Navigation:** Workers & Pages → click the worker → **Settings** → **Domains & Routes**
 
@@ -97,7 +97,7 @@ Configure custom domains for each Worker in the Cloudflare dashboard:
 
 The following are configured in code and don't need dashboard setup:
 - `DB` (D1 binding) — `cyberdeck-db` for production, `cyberdeck-db-beta` for beta
-- `PUBLIC_BASE_URL` — `https://cyberdeck.club` for production, `https://beta.cyberdeck.club` for beta
+- `PUBLIC_BASE_URL` — `https://cyberdecks.org` for production, `https://beta.cyberdecks.org` for beta
 
 ## Deployment Methods
 
@@ -116,7 +116,7 @@ The workflow will:
 2. Checkout `wrangler.jsonc` and `drizzle/migrations/` (sparse checkout)
 3. Run D1 migrations against `cyberdeck-db-beta` via `--env beta`
 4. Deploy to Worker `cyberdeck-club-beta` via `wrangler deploy --env beta`
-5. Make the beta version live at https://beta.cyberdeck.club
+5. Make the beta version live at https://beta.cyberdecks.org
 
 ### 2. Production (Manual)
 
@@ -138,7 +138,7 @@ The workflow will:
 1. Build the project
 2. Run D1 migrations against `cyberdeck-db`
 3. Deploy to Worker `cyberdeck-club` via `wrangler deploy`
-4. Make the production version live at https://cyberdeck.club
+4. Make the production version live at https://cyberdecks.org
 
 ### 3. Local Manual Deploy
 
