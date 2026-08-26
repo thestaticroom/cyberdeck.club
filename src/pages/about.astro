@@ -16,60 +16,58 @@ let customContent: string | null = null;
 
 // Default about page content (shown if no custom content in DB)
 const defaultContent = `
-# About
+# System Manifesto
 
 ## What is cyberdecks.org?
 
-cyberdecks.org is a community for folks building cyberdecks — custom portable computers made from thrifted purses, toy compacts, lunchboxes, 3D-printed shells, and whatever else sparks something in you. We're part wiki, part forum, part build showcase, built specifically for women, femmes, queer folk, beginners, and anyone who's ever felt like maker spaces weren't made for them.
+cyberdecks.org is a decentralized collective for hardware hackers, rig-builders, and netrunners. We salvage dead tech and forge it into custom cyberdecks. We are part encrypted wiki, part underground forum, part build showcase — built by and for women, femmes, queer folk, and outcasts who know the corporate "maker space" was never designed for us.
 
-The cyberdeck world has always had talented builders. What it hasn't always had is a space where a first-timer putting a Raspberry Pi in a seashell clutch feels as welcome as someone on their tenth Pelican case build. That's what we're here to change.
+The grid has always had its elite builders. What it lacked was a safehouse where a first-timer wiring a Raspberry Pi into a thrifted compact feels as respected as a veteran iterating on their tenth Pelican-case mainframe. That’s the protocol we’re rewriting.
 
-## The Community
+## The Collective
 
-Our community includes makers of all skill levels, from people who picked up a soldering iron last week to builders who've been iterating on their decks for years.
+Our node includes builders of all skill levels, from those who picked up a soldering iron last week to veterans who have been pushing hardware to its absolute limits for years.
 
-- **Beginners** — Starting their first build with a Raspberry Pi and a dream
-- **Skilled makers** — Refining their craft over years of iteration
-- **Electronics enthusiasts** — Soldering, wiring, and debugging hardware
-- **Software folks** — Writing custom OS configurations, kiosk-mode setups, and applications
-- **Designer-makers** — Creating enclosures and interfaces that are as beautiful as they are functional
+- **Initiates** — Flashing their first custom ROM and wiring their first rig.
+- **Veteran Makers** — Refining their craft, optimizing power draw, and iterating on complex setups.
+- **Hardware Hackers** — Soldering, bypassing, and debugging silicon at the component level.
+- **Code Weavers** — Writing custom OS configurations, kiosk-mode lockdowns, and bespoke applications.
+- **Chassis Architects** — Designing enclosures and interfaces that are as lethal and beautiful as they are functional.
 
-Whether you showed up because of the 2026 TikTok wave or because you've been browsing r/cyberDeck for years — you belong here.
+Whether you intercepted our signal from the 2026 social feeds or you’ve been lurking in the shadows of r/cyberDeck for years — your node is active. You belong here.
 
-## How to Get Involved
+## How to Jack In
 
-### 📖 Start with the Wiki
+### 📖 Access the Archives (Wiki)
+New to the build? The archives hold schematics covering everything from sourcing micro-controllers to scavenging the perfect chassis. Start your initiation at [Your First Cyberdeck: Initiation Protocol](/wiki/getting-started/your-first-cyberdeck).
 
-New to cyberdeck building? Our wiki has guides covering everything from choosing your first tiny computer to thrifting the perfect case. Check out [Your First Cyberdeck: A Beginner's Guide](/wiki/getting-started/your-first-cyberdeck) to begin.
+### 💬 Tap into the Network (Forum)
+Questions? Progress reports? The forum is the channel where the real comms happen. Broadcast your presence and say hello in [Introductions](/forum/introductions).
 
-### 💬 Join the Forum
+### 🛠️ Log Your Build
+Forged something new? The Builds sector is for showcasing your schematics, your critical failures, your "oh no" moments, and your final rig. Every logged build upgrades the collective knowledge base.
 
-Have questions? Want to share your progress? The forum is where the conversation happens. Introduce yourself in [Introductions](/forum/introductions) and say hello.
-
-### 🛠️ Share Your Build
-
-Built something? The Builds section is for showcasing your work — your design choices, your stumbling blocks, your "oh no" moments, and your finished product. Every build teaches someone something.
-
-### 📅 Attend Meetups
-
-We hold regular virtual meetups and occasional in-person events. It's a good way to meet other builders, get feedback on your projects, and learn from the community.
+### 📅 Sync at Meetups
+We run regular virtual syncs and occasional IRL gatherings. A vital way to trade knowledge, get eyes on your prototype, and link up with the collective.
 
 ## Quick Links
 
-- [Your First Cyberdeck: A Beginner's Guide](/wiki/getting-started/your-first-cyberdeck)
-- [Introduce Yourself](/forum/introductions)
-- [Browse Builds](/builds)
-- [Upcoming Meetups](/meetups)
+- [Your First Cyberdeck: Initiation Protocol](/wiki/getting-started/your-first-cyberdeck)
+- [Broadcast Your Presence (Introductions)](/forum/introductions)
+- [Browse the Builds](/builds)
+- [Upcoming Syncs (Meetups)](/meetups)
 
-## Support cyberdecks.org
+## Keep the Servers Running
 
-cyberdecks.org is a labor of love, built and maintained by Aster and the community. If you'd like to help keep the lights on, consider [buying us a coffee](https://www.buymeacoffee.com/thestaticroom).
+cyberdecks.org is maintained by the collective. If you want to keep the lights on and the servers humming, consider [fueling the operation](https://www.buymeacoffee.com/thestaticroom).
 
-## About This Site
+## System Specs
 
-cyberdecks.org is an open-source community project built with Astro 6, Drizzle ORM, Better Auth, Cloudflare Pages, and a whole lot of caffeine. The source is on [GitHub](https://github.com/thestaticroom/cyberdeck.club). The design system is femme maximalist neobrutalism — warm coral, lavender, honey, and cream with thick borders and hard offset shadows — because maker spaces don't have to look like terminals.
+cyberdecks.org is an open-source collective node built with Astro 6, Drizzle ORM, Better Auth, Cloudflare Pages, and a whole lot of caffeine. The source code is open on [GitHub](https://github.com/thestaticroom/cyberdeck.club). 
 
-Questions about the site itself? Drop them in the forum's [Off Topic](/forum/off-topic) section.
+Our UI protocol is high-contrast cyberpunk: neon on black. Clean, readable, and built for long sessions in the dark. Because the future belongs to everyone, and terminals shouldn't look like corporate pastel brochures.
+
+Questions about the site itself? Drop them in the forum's [Off Topic](/forum/off-topic) sector.
 `;
 const contentHtml = renderMarkdownToHtml(customContent ?? defaultContent);
 ---
