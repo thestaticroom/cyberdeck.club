@@ -1,6 +1,6 @@
 # Personal Access Tokens — API Documentation
 
-Personal Access Tokens (PATs) allow programmatic access to the cyberdeck.club API without using session cookies. They are designed for the MCP server integration, API scripting, and third-party tool access.
+Personal Access Tokens (PATs) allow programmatic access to the cyberdecks.org API without using session cookies. They are designed for the MCP server integration, API scripting, and third-party tool access.
 
 ## Overview
 
@@ -22,7 +22,7 @@ PATs authenticate API requests the same way session cookies do — they resolve 
 cdc_<64 hex chars>
 ```
 
-- **Prefix:** `cdc_` (identifies a cyberdeck.club PAT)
+- **Prefix:** `cdc_` (identifies a cyberdecks.org PAT)
 - **Body:** 64 hexadecimal characters (32 random bytes)
 - **Total length:** 68 characters
 - **Example:** `cdc_a1b2c3d4e5f6...` (truncated for display)
@@ -248,13 +248,13 @@ Include the PAT in the `Authorization` header as a Bearer token:
 
 ```http
 GET /api/builds HTTP/1.1
-Host: cyberdeck.club
+Host: cyberdecks.org
 Authorization: Bearer cdc_a1b2c3d4e5f6...
 ```
 
 **Example with curl:**
 ```bash
-curl -X GET "https://cyberdeck.club/api/builds" \
+curl -X GET "https://cyberdecks.org/api/builds" \
   -H "Authorization: Bearer cdc_a1b2c3d4e5f6..." \
   -H "Content-Type: application/json"
 ```

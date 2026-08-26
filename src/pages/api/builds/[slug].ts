@@ -461,11 +461,11 @@ export const PUT: APIRoute = async (ctx) => {
       const fromAddress =
         env.RESEND_FROM_ADDRESS ??
         import.meta.env.RESEND_FROM_ADDRESS ??
-        "cyberdeck.club <noreply@cyberdeck.club>";
+        "cyberdeck.org <noreply@cyberdecks.org>";
       const baseUrl =
         env.PUBLIC_BASE_URL ??
         import.meta.env.PUBLIC_BASE_URL ??
-        "https://cyberdeck.club";
+        "https://cyberdecks.org";
       // Use display name only per AGENTS.md §4.1
       const builderDisplayName = String(
         updatedBuilds[0]?.authorName ?? ctx.locals.user.name ?? "A member"
@@ -1004,11 +1004,11 @@ export const PATCH: APIRoute = async (ctx) => {
       const fromAddress =
         env.RESEND_FROM_ADDRESS ??
         import.meta.env.RESEND_FROM_ADDRESS ??
-        "cyberdeck.club <noreply@cyberdeck.club>";
+        "cyberdecks.org <noreply@cyberdecks.org>";
       const baseUrl =
         env.PUBLIC_BASE_URL ??
         import.meta.env.PUBLIC_BASE_URL ??
-        "https://cyberdeck.club";
+        "https://cyberdecks.org";
       // Use display name only per AGENTS.md §4.1
       const builderDisplayName = String(
         updatedBuilds[0]?.authorName ?? ctx.locals.user.name ?? "A member"

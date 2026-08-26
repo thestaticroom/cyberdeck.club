@@ -96,7 +96,7 @@ export const POST: APIRoute = async (ctx) => {
     env.EMAIL_FROM ??
     env.RESEND_FROM_ADDRESS ??
     import.meta.env.RESEND_FROM_ADDRESS ??
-    "cyberdeck.club <noreply@cyberdeck.club>";
+    "cyberdecks.org <noreply@cyberdecks.org>";
 
   try {
     if (action === "approve") {

@@ -11,7 +11,7 @@
 import { getResend } from "./resend";
 import type { NotificationType } from "./notifications";
 
-const FROM_ADDRESS = "cyberdeck.club <notifications@cyberdeck.club>";
+const FROM_ADDRESS = "cyberdecks.org <notifications@cyberdecks.org>";
 
 /**
  * Human-readable labels for notification types.
@@ -63,7 +63,7 @@ export async function sendNotificationEmail(opts: {
     body,
     entityUrl,
     actorName,
-    siteUrl = "https://cyberdeck.club",
+    siteUrl = "https://cyberdecks.org",
   } = opts;
 
   const typeLabel = TYPE_LABELS[type];
@@ -78,7 +78,7 @@ export async function sendNotificationEmail(opts: {
     await resend.emails.send({
       from: FROM_ADDRESS,
       to,
-      subject: `[cyberdeck.club] ${title}`,
+      subject: `[cyberdecks.org] ${title}`,
       html: buildNotificationHtml({
         displayName,
         typeLabel,
@@ -140,7 +140,7 @@ function buildNotificationHtml(opts: {
 
     <p style="font-size: 13px; color: #6b5876; margin: 24px 0 0; line-height: 1.5;">
       You're receiving this because you subscribed to this content on
-      <a href="https://cyberdeck.club" style="color: #7c3aed;">cyberdeck.club</a>.
+      <a href="https://cyberdecks.org" style="color: #7c3aed;">Cyberdecks.org</a>.
     </p>
 
   </div>
@@ -169,8 +169,8 @@ function buildNotificationText(opts: {
     "",
     `View it: ${fullUrl}`,
     "",
-    "— cyberdeck.club",
+    "— cyberdecks.org",
     "",
-    "You're receiving this because you subscribed to this content on cyberdeck.club.",
+    "You're receiving this because you subscribed to this content on cyberdecks.org.",
   ].join("\n");
 }

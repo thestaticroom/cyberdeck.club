@@ -13,7 +13,7 @@
  * Required env vars:
  *   - CRON_SECRET: shared secret matching the Pages app's CRON_SECRET
  *   - PROMOTION_ENDPOINT: full URL to the cron endpoint
- *     (e.g., https://cyberdeck.club/api/cron/promotions)
+ *     (e.g., https://cyberdecks.org/api/cron/promotions)
  */
 
 interface Env {

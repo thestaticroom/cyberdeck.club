@@ -1,6 +1,6 @@
 # cyberdeck-mcp-server
 
-MCP (Model Context Protocol) server for [cyberdeck.club](https://cyberdeck.club) — enables AI assistants to interact with the cyberdeck.club API using Personal Access Tokens (PATs).
+MCP (Model Context Protocol) server for [cyberdecks.org](https://cyberdecks.org) — enables AI assistants to interact with the cyberdecks.org API using Personal Access Tokens (PATs).
 
 ## Overview
 
@@ -21,18 +21,18 @@ npm install @cyberdeck-club/mcp-server
 
 ## Configuration
 
-The server requires a Personal Access Token (PAT) from cyberdeck.club.
+The server requires a Personal Access Token (PAT) from cyberdecks.org.
 
 ### Environment Variables
 
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
-| `CYBERDECK_PAT` | Yes | — | Personal Access Token from cyberdeck.club/settings |
-| `CYBERDECK_API_URL` | No | `https://cyberdeck.club` | Base URL of the cyberdeck.club API |
+| `CYBERDECK_PAT` | Yes | — | Personal Access Token from cyberdecks.org/settings |
+| `CYBERDECK_API_URL` | No | `https://cyberdecks.org` | Base URL of the cyberdecks.org API |
 
 ### Generating a Personal Access Token
 
-1. Log in to [cyberdeck.club](https://cyberdeck.club)
+1. Log in to [cyberdecks.org](https://cyberdecks.org)
 2. Go to Settings → Personal Access Tokens
 3. Create a new token with the desired scopes
 4. Copy the token and store it securely
@@ -46,7 +46,7 @@ The server requires a Personal Access Token (PAT) from cyberdeck.club.
 export CYBERDECK_PAT="your_personal_access_token"
 
 # Run the server
-npx @cyberdeck-club/mcp-server
+npx @cyberdecks.org/mcp-server
 ```
 
 ### Using with Claude Desktop
@@ -72,7 +72,7 @@ Add to your Claude Desktop configuration:
 The server communicates over stdio. Configure your MCP client to spawn it as a subprocess:
 
 ```bash
-CYBERDECK_PAT=your_token node ./node_modules/@cyberdeck-club/mcp-server/dist/index.js
+CYBERDECK_PAT=your_token node ./node_modules/@cyberdecks.org/mcp-server/dist/index.js
 ```
 
 ## Available Tools
@@ -170,7 +170,7 @@ Some tools require specific user roles:
 
 ```bash
 # Clone the repository
-git clone https://github.com/cyberdeck-club/cyberdeck.club.git
+git clone https://github.com/thestaticroom/cyberdeck.club.git
 cd cyberdeck.club/mcp-server
 
 # Install dependencies

@@ -138,7 +138,7 @@ export default function TokenManager({ userRole }: TokenManagerProps) {
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
           <div>
             <p style={{ margin: 0, fontSize: "0.875rem", color: "var(--text-muted)" }}>
-              Personal Access Tokens let you use the cyberdeck.club API from scripts, tools, and AI assistants.
+              Personal Access Tokens let you use the cyberdecks.org API from scripts, tools, and AI assistants.
             </p>
           </div>
           <button

@@ -56,7 +56,7 @@ declare global {
       patScopes?: string[];
       /** PAT token ID — set when authenticated via PAT, for usage logging */
       patTokenId?: string;
-      /** True when request is for beta site (beta.cyberdeck.club or beta=true param) */
+      /** True when request is for beta site (beta.cyberdecks.org or beta=true param) */
       isBetaSite: boolean;
     }
   }

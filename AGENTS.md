@@ -1,4 +1,4 @@
-# AGENTS.md — cyberdeck.club
+# AGENTS.md — cyberdecks.org
 
 > Single source of truth for onboarding coding agents to this repository.
 > This file is included in every agentic coding session — follow it strictly.
@@ -11,7 +11,7 @@
 
 ## 0. What This Is
 
-**cyberdeck.club** is a community platform for cyberdeck builders — part wiki,
+**cyberdecks.org** is a community platform for cyberdeck builders — part wiki,
 part forum, part build showcase. The primary audience is women, femmes, queer
 folk, and people historically excluded from tech/maker spaces. The community
 celebrates cyberdecks as aesthetic expression — builds in Polly Pocket toys,
@@ -22,7 +22,7 @@ builds.
 complete design system — palette, typography, components, copy tone, inclusive
 identity patterns, and accessibility requirements.
 
-**Repository:** `https://github.com/cyberdeck-club/cyberdeck.club/`
+**Repository:** `https://github.com/thestaticroom/cyberdeck.club/`
 
 ---
 

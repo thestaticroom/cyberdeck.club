@@ -158,16 +158,16 @@ To clear a field, set `value` to `null`.
 | "invalid status" | Must be one of: `ON_TRACK`, `AT_RISK`, `OFF_TRACK`, `COMPLETE`, `INACTIVE` |
 | Only titles returned | Always pass `fields` array in `list_project_items` |
 
-# Example: Adding a cyberdeck.club issue to the org project
+# Example: Adding a cyberdecks.org issue to the org project
 
 ```json
 {
   "method": "add_project_item",
-  "owner": "cyberdeck-club",
+  "owner": "cyberdecks.org",
   "owner_type": "org",
   "project_number": 1,
   "item_type": "issue",
-  "item_owner": "cyberdeck-club",
+  "item_owner": "thestaticroom",
   "item_repo": "cyberdeck.club",
   "issue_number": 42
 }

@@ -1,5 +1,5 @@
 /**
- * HTTP client wrapper for cyberdeck.club API
+ * HTTP client wrapper for cyberdecks.org API
  *
  * Handles authentication via Bearer token, JSON serialization,
  * and error handling with typed responses.

@@ -1,6 +1,6 @@
 ---
 name: guidelines-check
-description: Sweeps recent forum posts, wiki edits, build descriptions, and comments across cyberdeck.club for compliance with community guidelines — checking for welcoming tone, inclusive language, on-topic content, and spam — and categorizes findings by severity.
+description: Sweeps recent forum posts, wiki edits, build descriptions, and comments across cyberdecks.org for compliance with community guidelines — checking for welcoming tone, inclusive language, on-topic content, and spam — and categorizes findings by severity.
 ---
 
 # Guidelines Compliance Check

@@ -175,13 +175,13 @@ export async function sendModBlockNotification(
   await resend.emails.send({
     from: fromAddress,
     to: adminEmail,
-    subject: `[cyberdeck.club] User attempted to block ${targetRole}: ${targetName}`,
+    subject: `[cyberdecks.org] User attempted to block ${targetRole}: ${targetName}`,
     html: `
       <h2>Mod/Admin Block Attempt</h2>
       <p><strong>${blockerName}</strong> attempted to block <strong>${targetName}</strong> (${targetRole}).</p>
       <p>This may indicate the ${targetRole.toLowerCase()} is behaving inappropriately, or it may be a misunderstanding. Please investigate.</p>
       ${detailsSection}
-      <p><em>Sent automatically by cyberdeck.club</em></p>
+      <p><em>Sent automatically by cyberdecks.org</em></p>
     `,
   });
 }

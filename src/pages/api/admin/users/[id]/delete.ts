@@ -121,7 +121,7 @@ export const POST: APIRoute = async (ctx) => {
     const fromAddress = cfEnv.EMAIL_FROM
       ?? cfEnv.RESEND_FROM_ADDRESS
       ?? import.meta.env.RESEND_FROM_ADDRESS
-      ?? "cyberdeck.club <noreply@cyberdeck.club>";
+      ?? "cyberdecks.org <noreply@cyberdecks.org>";
     const adminEmail = (cfEnv.ADMIN_EMAIL ?? import.meta.env.ADMIN_EMAIL ?? "").toLowerCase().trim();
 
     if (resendApiKey) {

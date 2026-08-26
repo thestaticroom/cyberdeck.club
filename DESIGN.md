@@ -1,4 +1,4 @@
-# DESIGN.md — cyberdeck.club Design System
+# DESIGN.md — cyberdecks.org Design System
 
 > **This file is persistent design context for code-generation agents (Claude,
 > Minimax M2.7, Copilot, Cursor, etc.) working on this Astro 6 + Tailwind v4
@@ -10,7 +10,7 @@
 
 ## 0. What This Is
 
-**cyberdeck.club** is a community platform for cyberdeck builders — part wiki,
+**Cyberdecks.org** is a community platform for cyberdeck builders — part wiki,
 part forum, part build showcase. The primary audience is **women, femmes, queer
 folk, and people historically excluded from tech/maker spaces.** The community
 celebrates cyberdecks as **aesthetic expression** — people making cyberdecks in

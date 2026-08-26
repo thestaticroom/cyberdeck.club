@@ -1,5 +1,5 @@
 /**
- * Shared types for the cyberdeck.club MCP server
+ * Shared types for the cyberdecks.org MCP server
  */
 
 // ---------------------------------------------------------------------------

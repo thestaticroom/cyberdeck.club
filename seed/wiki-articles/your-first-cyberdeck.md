@@ -187,11 +187,11 @@ You will get stuck. Everyone does — first-time builders and experienced ones a
 - **[r/cyberDeck on Reddit](https://www.reddit.com/r/cyberDeck/)** — The largest cyberdeck forum (~183,000 members). Good for browsing builds and getting inspired; the community tone can be uneven, so if you get a curt response, it's not you.
 - **[writerdeck.org](http://www.writerdeck.org/)** — If your build is specifically a distraction-free writing machine, this site aggregates hardware and software resources for that niche.
 - **[Raspberry Pi documentation](https://www.raspberrypi.com/documentation/)** — The official docs for setting up and configuring your Pi. Very thorough.
-- **cyberdeck.club** — You're here. Ask in the forum, post in the build log channel, or browse the wiki. That's what we're for.
+- **cyberdecks.org** - You're here. Ask in the forum, post in the build log channel, or browse the wiki. That's what we're for.
 
 ## You Don't Have to Do It All at Once
 
-The best advice most experienced builders give is: **get it working first, then make it pretty.** Your first deck might be a Raspberry Pi taped to a power bank inside a cardboard box with a keyboard balanced on top. That counts. It's a cyberdeck. You can iterate from there — swap the case, add a battery board, upgrade the screen, 3D-print a custom enclosure — at whatever pace works for you and your budget.
+The best advice most experienced builders give is: **get it working first, then make it pretty.** Your first deck might be a Raspberry Pi taped to a power bank inside a cardboard box with a keyboard balanced on top. That counts. It's a cyberdeck. You can iterate from there - swap the case, add a battery board, upgrade the screen, 3D-print a custom enclosure - at whatever pace works for you and your budget.
 
 The point has never been to build the perfect computer. It's to build *your* computer.
 

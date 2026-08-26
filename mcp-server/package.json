@@ -1,7 +1,7 @@
 {
-  "name": "@cyberdeck-club/mcp-server",
+  "name": "@cyberdecks.org/mcp-server",
   "version": "0.1.2",
-  "description": "MCP server for cyberdeck.club — manage builds, wiki, forum, meetups via AI assistants",
+  "description": "MCP server for cyberdecks.org — manage builds, wiki, forum, meetups via AI assistants",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
@@ -18,7 +18,7 @@
     "cyberdeck",
     "ai"
   ],
-  "author": "cyberdeck.club",
+  "author": "cyberdecks.org",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",

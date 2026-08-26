@@ -1,6 +1,6 @@
 ---
 name: community-metrics
-description: Gathers and reports community health metrics for cyberdeck.club — user counts by role, content activity across builds/forum/wiki/meetups, moderation queue depth, promotion pipeline status, and API adoption metrics. Use when the admin asks how the community is doing, for weekly/monthly health check-ins, or when preparing stakeholder reports.
+description: Gathers and reports community health metrics for cyberdecks.org — user counts by role, content activity across builds/forum/wiki/meetups, moderation queue depth, promotion pipeline status, and API adoption metrics. Use when the admin asks how the community is doing, for weekly/monthly health check-ins, or when preparing stakeholder reports.
 ---
 
 # Community Metrics & Reporting

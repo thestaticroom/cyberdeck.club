@@ -1,6 +1,6 @@
 ---
 name: security-audit
-description: Reviews PAT token inventory, analyzes API usage logs for suspicious patterns, audits role distribution and changes, checks scope compliance, and reviews banned user records for cyberdeck.club. Use for regular security check-ins, after suspicious activity reports, when reviewing token revocations, or when auditing role changes and bans.
+description: Reviews PAT token inventory, analyzes API usage logs for suspicious patterns, audits role distribution and changes, checks scope compliance, and reviews banned user records for cyberdecks.org. Use for regular security check-ins, after suspicious activity reports, when reviewing token revocations, or when auditing role changes and bans.
 ---
 
 # Security Audit

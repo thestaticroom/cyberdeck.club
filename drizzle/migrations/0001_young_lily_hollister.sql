@@ -33,7 +33,7 @@ INSERT INTO `static_pages` (`id`, `slug`, `title`, `content`, `status`, `created
     lower(hex(randomblob(4)) || '-' || hex(randomblob(2)) || '-' || '4' || substr(hex(randomblob(2)),2) || '-' || substr('AB89',abs(random()) % 4 + 1, 1) || substr(hex(randomblob(2)),2) || '-' || hex(randomblob(6))),
     'about',
     'About',
-    '<section class="mb-12"><h2>What is cyberdeck.club?</h2><p>cyberdeck.club is a community for enthusiasts building cyberdecks — portable, custom-built computers inspired by the retro-futuristic aesthetic of cyberpunk fiction.</p></section>',
+    '<section class="mb-12"><h2>What is cyberdecks.org?</h2><p>cyberdecks.org is a community for enthusiasts building cyberdecks — portable, custom-built computers inspired by the retro-futuristic aesthetic of cyberpunk fiction.</p></section>',
     'published',
     unixepoch(),
     unixepoch()

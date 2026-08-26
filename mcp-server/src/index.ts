@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * MCP Server entry point for cyberdeck.club
+ * MCP Server entry point for cyberdecks.org
  *
  * This server exposes tools for managing builds, wiki articles, forum threads,
  * meetups, user profiles, and administrative operations via the Model Context Protocol.
@@ -80,13 +80,13 @@ class CyberdeckMCPServer {
 
 async function main(): Promise<void> {
   // Read configuration from environment variables
-  const baseUrl = process.env.CYBERDECK_API_URL || "https://cyberdeck.club";
+  const baseUrl = process.env.CYBERDECK_API_URL || "https://cyberdecks.org";
   const token = process.env.CYBERDECK_PAT;
 
   if (!token) {
     console.error(
       "Error: CYBERDECK_PAT environment variable is required.\n" +
-      "Generate a Personal Access Token at https://cyberdeck.club/settings"
+      "Generate a Personal Access Token at https://cyberdecks.org/settings"
     );
     process.exit(1);
   }

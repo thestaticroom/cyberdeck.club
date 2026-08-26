@@ -1,6 +1,6 @@
 # Database Management Guide
 
-This document covers D1 database operations for the cyberdeck.club project.
+This document covers D1 database operations for the cyberdecks.org project.
 
 ## Prerequisites
 
@@ -43,8 +43,8 @@ The project uses three D1 database targets, configured in [`wrangler.jsonc`](wra
 Non-secret vars (like `PUBLIC_BASE_URL`) are set per-environment in [`wrangler.jsonc`](wrangler.jsonc):
 
 - **Default (local):** `PUBLIC_BASE_URL: http://localhost:8787`
-- **Beta:** `PUBLIC_BASE_URL: https://beta.cyberdeck.club`
-- **Prod:** `PUBLIC_BASE_URL: https://cyberdeck.club`
+- **Beta:** `PUBLIC_BASE_URL: https://beta.cyberdecks.org`
+- **Prod:** `PUBLIC_BASE_URL: https://cyberdecks.org`
 
 **Secrets** (like `BETTER_AUTH_SECRET`, `RESEND_API_KEY`, `ADMIN_EMAIL`) must be set via the Cloudflare dashboard or `wrangler secret put`:
 

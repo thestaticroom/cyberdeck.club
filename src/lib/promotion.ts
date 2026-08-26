@@ -1,5 +1,5 @@
 /**
- * Automatic role promotion logic for cyberdeck.club.
+ * Automatic role promotion logic for cyberdecks.org.
  *
  * This module handles automatic role promotions based on user activity.
  *

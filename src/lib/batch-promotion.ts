@@ -1,5 +1,5 @@
 /**
- * Batch role promotion logic for cyberdeck.club.
+ * Batch role promotion logic for cyberdecks.org.
  *
  * Runs bulk promotion queries via Drizzle ORM for all eligible users.
  * Called by the cron endpoint and the admin manual trigger.

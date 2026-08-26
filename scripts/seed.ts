@@ -1,5 +1,5 @@
 /**
- * cyberdeck.club seed script
+ * cyberdecks.org seed script
  *
  * Populates the local D1 database with seed data from seed/*.json files.
  * Run with: npx tsx scripts/seed.ts

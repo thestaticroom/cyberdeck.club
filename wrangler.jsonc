@@ -30,7 +30,7 @@
 	//   [triggers]
 	//   crons = ["0 6 * * *"]
 	//   [vars]
-	//   PROMOTION_ENDPOINT = "https://cyberdeck.club/api/cron/promotions"
+	//   PROMOTION_ENDPOINT = "https://cyberdecks.org/api/cron/promotions"
 	//   # Set CRON_SECRET via: wrangler secret put CRON_SECRET
 	//
 	// The middleware also performs lightweight on-request promotion checks
@@ -52,7 +52,7 @@
 
 	// ─── Production vars ────────────────────────────────────────────────
 	"vars": {
-		"PUBLIC_BASE_URL": "https://cyberdeck.club"
+		"PUBLIC_BASE_URL": "https://cyberdecks.org"
 	},
 
 	// ─── Beta environment ───────────────────────────────────────────────
@@ -77,7 +77,7 @@
 				}
 			],
 			"vars": {
-				"PUBLIC_BASE_URL": "https://beta.cyberdeck.club"
+				"PUBLIC_BASE_URL": "https://beta.cyberdecks.org"
 			},
 			"r2_buckets": [
 				{

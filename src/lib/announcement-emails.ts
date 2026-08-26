@@ -19,7 +19,7 @@ import { user } from "@/db/auth-schema";
 import type { DrizzleD1Database } from "drizzle-orm/d1";
 import type * as schema from "@/db/schema";
 
-const FROM_ADDRESS = "cyberdeck.club <announcements@cyberdeck.club>";
+const FROM_ADDRESS = "cyberdecks.org <announcements@cyberdecks.org>";
 const BATCH_SIZE = 100; // Resend batch limit
 
 interface AnnouncementEmailOpts {
@@ -68,7 +68,7 @@ export async function sendAnnouncementEmailBlast(
     announcementTitle,
     announcementContent,
     announcementId,
-    siteUrl = "https://cyberdeck.club",
+    siteUrl = "https://cyberdecks.org",
   } = opts;
 
   const announcementUrl = `${siteUrl}/announcements`;
@@ -113,7 +113,7 @@ export async function sendAnnouncementEmailBlast(
       const emails = batch.map((recipient) => ({
         from: FROM_ADDRESS,
         to: recipient.email,
-        subject: `📢 New from cyberdeck.club: ${announcementTitle}`,
+        subject: `📢 New from cyberdecks.org: ${announcementTitle}`,
         html: buildAnnouncementHtml({
           displayName: recipient.name,
           title: announcementTitle,
@@ -199,7 +199,7 @@ function buildAnnouncementHtml(opts: {
 
     <p style="font-size: 13px; color: #6b5876; margin: 24px 0 0; line-height: 1.5;">
       You're receiving this because you're a member of
-      <a href="https://cyberdeck.club" style="color: #7c3aed;">cyberdeck.club</a>.
+      <a href="https://cyberdecks.org" style="color: #7c3aed;">cyberdecks.org</a>.
       We only send emails for important updates — no spam, ever.
     </p>
 
@@ -230,8 +230,8 @@ function buildAnnouncementText(opts: {
     "",
     `Read the full announcement: ${announcementUrl}`,
     "",
-    "— cyberdeck.club",
+    "— cyberdecks.org",
     "",
-    "You're receiving this because you're a member of cyberdeck.club. We only send emails for important updates — no spam, ever.",
+    "You're receiving this because you're a member of cyberdecks.org. We only send emails for important updates — no spam, ever.",
   ].join("\n");
 }

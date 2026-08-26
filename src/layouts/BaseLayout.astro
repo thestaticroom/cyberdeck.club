@@ -23,13 +23,13 @@ interface Props {
 const { 
   hideNav = false, 
   hideFooter = false,
-  title = "cyberdeck.club",
+  title = "cyberdecks.org",
   description = "A community for cyberdeck builders, hackers, and enthusiasts. Share your builds, discuss projects, and connect with fellow makers.",
   ogImage = "/og-image.png"
 } = Astro.props;
 
 // Build canonical URL
-const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? "https://cyberdeck.club");
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? "https://cyberdecks.org");
 
 // Get authenticated user from locals
 const user = Astro.locals.user;

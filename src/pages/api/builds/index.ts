@@ -406,11 +406,11 @@ export const POST: APIRoute = async (ctx) => {
         const fromAddress =
           env.RESEND_FROM_ADDRESS ??
           import.meta.env.RESEND_FROM_ADDRESS ??
-          "cyberdeck.club <noreply@cyberdeck.club>";
+          "cyberdecks.org <noreply@cyberdecks.org>";
         const baseUrl =
           env.PUBLIC_BASE_URL ??
           import.meta.env.PUBLIC_BASE_URL ??
-          "https://cyberdeck.club";
+          "https://cyberdecks.org";
         const submitterName = String(user.name ?? "A member");
 
         if (adminEmail) {
@@ -419,7 +419,7 @@ export const POST: APIRoute = async (ctx) => {
             await resend.emails.send({
               from: fromAddress,
               to: adminEmail,
-              subject: `[cyberdeck.club] New build submitted for review: ${title.trim()}`,
+              subject: `[cyberdecks.org] New build submitted for review: ${title.trim()}`,
               html: `
                 <h2>New Build Submitted for Review</h2>
                 <p><strong>${submitterName}</strong> has submitted a new build that passed automated review and is waiting for human review.</p>
@@ -434,7 +434,7 @@ export const POST: APIRoute = async (ctx) => {
                   </tr>
                 </table>
                 <p><a href="${baseUrl}/admin/builds">Review in the moderation queue →</a></p>
-                <p><em>Sent automatically by cyberdeck.club</em></p>
+                <p><em>Sent automatically by cyberdecks.org</em></p>
               `,
             });
           } catch (emailErr) {

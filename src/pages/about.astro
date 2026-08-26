@@ -10,7 +10,7 @@ export const prerender = false;
 // Try to fetch about page content from database
 const db = Astro.locals.db;
 
-let pageTitle = 'About cyberdeck.club';
+let pageTitle = 'About';
 let pageSubtitle = 'Build Your Cyberdeck. Meet Your People.';
 let customContent: string | null = null;
 
@@ -32,21 +32,21 @@ try {
 
 // Default about page content (shown if no custom content in DB)
 const defaultContent = `
-# About cyberdeck.club
+# About
 
-## What is cyberdeck.club?
+## What is cyberdecks.org?
 
-cyberdeck.club is a community for folks building cyberdecks — custom portable computers made from thrifted purses, toy compacts, lunchboxes, 3D-printed shells, and whatever else sparks something in you. We're part wiki, part forum, part build showcase, built specifically for women, femmes, queer folk, beginners, and anyone who's ever felt like maker spaces weren't made for them.
+cyberdecks.org is a community for folks building cyberdecks — custom portable computers made from thrifted purses, toy compacts, lunchboxes, 3D-printed shells, and whatever else sparks something in you. We're part wiki, part forum, part build showcase, built specifically for women, femmes, queer folk, beginners, and anyone who's ever felt like maker spaces weren't made for them.
 
 The cyberdeck world has always had talented builders. What it hasn't always had is a space where a first-timer putting a Raspberry Pi in a seashell clutch feels as welcome as someone on their tenth Pelican case build. That's what we're here to change.
 
 ## Who Built This?
 
-**Aster Haven** (she/her) is the builder behind cyberdeck.club. A self-described "girl made of PLA and caffeine," she's a senior software engineer with thirteen-plus years of shipping web things — including time at the New York Times, Medium, and Segment — and an old-time contributor to the official Node.js website working group.
+**Aster Haven** (she/her) is the builder behind cyberdecks.org. A self-described "girl made of PLA and caffeine," she's a senior software engineer with thirteen-plus years of shipping web things — including time at the New York Times, Medium, and Segment — and an old-time contributor to the official Node.js website working group.
 
 These days she splits her time between writing code for healthcare technology and studying embedded engineering in her spare time, from unceded Wabanaki land in Maine. Her workshop is loud and varied: nearly 280 public GitHub repos and around 140 npm packages, ranging from [StrokeScript](https://github.com/therebelrobot/strokescript) (a plain-text notation language for cam motion profiles that exports SVG straight to a laser cutter) to [microcontroller-base](https://github.com/therebelrobot/microcontroller-base) (a unified template covering 22 boards across Seeed XIAO, Arduino, and Raspberry Pi families with TinyGo, Arduino C++, KiCad, and atopile-designed PCBs), to a corner of the Strudel live-coding music ecosystem, to [zine-arranger](https://codeberg.org/therebelrobot/zine-arranger) for print-and-fold PDF zines.
 
-cyberdeck.club is the natural intersection of all of it — code, fabrication, community, and the conviction that the people building computers inside Polly Pocket compacts deserve a home on the internet that was designed for them. As she put it on TikTok: the goal is "a secure, accessible, and flexible community #forthegirlsandthegays."
+Cyberdecks.org is the natural intersection of all of it — code, fabrication, community, and the conviction that the people building computers inside Polly Pocket compacts deserve a home on the internet that was designed for them. As she put it on TikTok: the goal is "a secure, accessible, and flexible community #forthegirlsandthegays."
 
 Find her at [@divine_circuitry on TikTok](https://www.tiktok.com/@divine_circuitry) and [@therebelrobot on GitHub](https://github.com/therebelrobot).
 
@@ -87,20 +87,20 @@ We hold regular virtual meetups and occasional in-person events. It's a good way
 - [Browse Builds](/builds)
 - [Upcoming Meetups](/meetups)
 
-## Support cyberdeck.club
+## Support cyberdecks.org
 
-cyberdeck.club is a labor of love, built and maintained by Aster and the community. If you'd like to help keep the lights on, consider [buying us a coffee](https://www.buymeacoffee.com/divine_circuitry).
+cyberdecks.org is a labor of love, built and maintained by Aster and the community. If you'd like to help keep the lights on, consider [buying us a coffee](https://www.buymeacoffee.com/thestaticroom).
 
 ## About This Site
 
-cyberdeck.club is an open-source community project built with Astro 6, Drizzle ORM, Better Auth, Cloudflare Pages, and a whole lot of caffeine. The source is on [GitHub](https://github.com/cyberdeck-club/cyberdeck.club). The design system is femme maximalist neobrutalism — warm coral, lavender, honey, and cream with thick borders and hard offset shadows — because maker spaces don't have to look like terminals.
+cyberdecks.org is an open-source community project built with Astro 6, Drizzle ORM, Better Auth, Cloudflare Pages, and a whole lot of caffeine. The source is on [GitHub](https://github.com/thestaticroom/cyberdeck.club). The design system is femme maximalist neobrutalism — warm coral, lavender, honey, and cream with thick borders and hard offset shadows — because maker spaces don't have to look like terminals.
 
 Questions about the site itself? Drop them in the forum's [Off Topic](/forum/off-topic) section.
 `;
 const contentHtml = renderMarkdownToHtml(customContent ?? defaultContent);
 ---
 
-<BaseLayout title={`${pageTitle} - cyberdeck.club`} description="Learn about the cyberdeck.club community and how to get involved.">
+<BaseLayout title={`${pageTitle} - cyberdecks.org`} description="Learn about the cyberdecks.org community and how to get involved.">
   <div class="max-w-3xl mx-auto px-4 py-12">
     <SectionHeader
       title={pageTitle}

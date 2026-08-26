@@ -69,7 +69,7 @@ jobs:
     if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'beta')
     environment:
       name: beta
-      url: https://beta.cyberdeck.club
+      url: https://beta.cyberdecks.org
 
     steps:
       - name: Checkout (for wrangler.jsonc + migrations)
@@ -154,7 +154,7 @@ jobs:
     if: github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'prod'
     environment:
       name: production
-      url: https://cyberdeck.club
+      url: https://cyberdecks.org
 
     steps:
       - name: Checkout (for wrangler.jsonc + migrations)

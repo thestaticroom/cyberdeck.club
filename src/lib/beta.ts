@@ -1,5 +1,5 @@
 /**
- * Beta access utility functions for cyberdeck.club.
+ * Beta access utility functions for cyberdecks.org.
  *
  * These functions handle beta signup requests, approvals, rejections, and waitlisting.
  */
@@ -36,14 +36,14 @@ export type CreateBetaSignupData = {
 
 /**
  * Check if the request is for the beta site.
- * Returns true if hostname is beta.cyberdeck.club OR URL has beta=true param.
+ * Returns true if hostname is beta.cyberdecks.org OR URL has beta=true param.
  */
 export function isBetaSite(request: Request): boolean {
   const url = new URL(request.url);
   const hostname = url.hostname.toLowerCase();
 
   // Check for beta subdomain
-  if (hostname === "beta.cyberdeck.club") {
+  if (hostname === "beta.cyberdecks.org") {
     return true;
   }
 
@@ -243,14 +243,14 @@ export async function sendBetaApplicationReceivedEmail(
     html: `
       <p>Hey ${displayName},</p>
       
-      <p>Thanks for requesting beta access to cyberdeck.club — we're glad you found us.</p>
+      <p>Thanks for requesting beta access to cyberdecks.org. We're glad you found us.</p>
       
       <p>We're reviewing requests by hand (a real person, not an algorithm), so it might take a day or two. We'll email you when you're in.</p>
       
       <p>While you wait: we're building this community specifically for folks who are curious about cyberdecks as creative projects — not just as tactical gear or survival tools. People making builds in toy cases, vintage purses, compact mirrors, lunchboxes, dinosaur toys, and whatever else sparks joy. If that sounds like your kind of thing, you're probably going to love it here.</p>
       
       <p>Talk soon,</p>
-      <p>cyberdeck.club</p>
+      <p>cyberdecks.org</p>
     `,
   });
 
@@ -278,13 +278,13 @@ export async function sendBetaApprovalEmail(
   const { error } = await resend.emails.send({
     from: fromAddress,
     to: email,
-    subject: "You're in! Welcome to cyberdeck.club 🎉",
+    subject: "You're in! Welcome to cyberdecks.org 🎉",
     html: `
       <p>Hey ${displayName},</p>
       
-      <p>You've got beta access to cyberdeck.club! Here's your magic link to log in:</p>
+      <p>You've got beta access to cyberdecks.org! Here's your magic link to log in:</p>
       
-      <p><a href="${magicLinkUrl}">Sign in to cyberdeck.club →</a></p>
+      <p><a href="${magicLinkUrl}">Sign in to cyberdecks.org →</a></p>
       
       <p>(If this link expires, you can request a new one from the main page.)</p>
       
@@ -299,7 +299,7 @@ export async function sendBetaApprovalEmail(
       <p>We're a small crew right now, so your feedback matters a lot. If you have thoughts on what's working, what's confusing, or what's missing, we want to hear all of it.</p>
       
       <p>Welcome aboard,</p>
-      <p>cyberdeck.club</p>
+      <p>cyberdecks.org</p>
     `,
   });
 
@@ -326,18 +326,18 @@ export async function sendBetaRejectionEmail(
   const { error } = await resend.emails.send({
     from: fromAddress,
     to: email,
-    subject: "Update on your cyberdeck.club request",
+    subject: "Update on your cyberdecks.org request",
     html: `
       <p>Hey ${displayName},</p>
       
-      <p>Thanks for your interest in cyberdeck.club. We've reviewed your beta access request and we're not going to be able to add you to this round of testing.</p>
+      <p>Thanks for your interest in cyberdecks.org. We've reviewed your beta access request and we're not going to be able to add you to this round of testing.</p>
       
       <p>We're being intentional about building a community that feels safe and welcoming for everyone, especially folks who are new to making and haven't always felt included in tech spaces. Sometimes that means we're cautious about who we invite during these early days while we're still getting our moderation and community guidelines in place.</p>
       
       <p>If you think we got this wrong, you're welcome to reply to this email and tell us more about yourself and what you're interested in. We read every reply.</p>
       
       <p>All the best,</p>
-      <p>cyberdeck.club</p>
+      <p>cyberdecks.org</p>
     `,
   });
 
@@ -368,14 +368,14 @@ export async function sendBetaWaitlistEmail(
     html: `
       <p>Hey ${displayName},</p>
       
-      <p>Thanks for requesting beta access to cyberdeck.club! We got more interest than we expected (which is a great problem to have), so we're bringing people in a few at a time to make sure the experience is solid.</p>
+      <p>Thanks for requesting beta access to cyberdecks.org! We got more interest than we expected (which is a great problem to have), so we're bringing people in a few at a time to make sure the experience is solid.</p>
       
       <p>You're on the list. We'll email you as soon as we're ready for the next group — usually within a week or two.</p>
       
       <p>In the meantime, if you want to start thinking about your first build, here's a question to sit with: if you could put a tiny computer inside any object you own, what would you pick?</p>
       
       <p>Talk soon,</p>
-      <p>cyberdeck.club</p>
+      <p>cyberdecks.org</p>
     `,
   });
 

@@ -80,7 +80,7 @@ The cyberdeck community lives in a few places, and they have different vibes:
 - **[Cyberdeck Cafe](https://cyberdeck.cafe)** — A welcoming, all-inclusive community with a Discord server, a build guide, and an explicit no-gatekeeping policy. If you're new, this is probably your best first stop.
 - **[r/cyberDeck on Reddit](https://www.reddit.com/r/cyberDeck/)** — The largest cyberdeck forum (~183,000 members), with a lot of build posts and inspiration. Worth browsing, though the community tone can be uneven.
 - **TikTok** — Search [#cyberdeck](https://www.tiktok.com/discover/pretty-cyberdeck) or [#girly cyber deck](https://www.tiktok.com/discover/girly-cyber-deck). The comment sections under femme builds tend to be surprisingly supportive and full of beginner questions — a good place to lurk and learn.
-- **cyberdeck.club** — You're here! We're building this wiki and community specifically for folks who want a space that centers all kinds of builders.
+- **cyberdecks.org** - You're here! We're building this wiki and community specifically for folks who want a space that centers all kinds of builders.
 
 ### The Broader Builder World
 

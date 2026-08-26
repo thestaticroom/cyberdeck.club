@@ -1,6 +1,6 @@
-# Implementation Prompt: Access Control & Role System for cyberdeck.club
+# Implementation Prompt: Access Control & Role System for cyberdecks.org
 
-> Give this prompt to an LLM with access to the cyberdeck.club codebase.
+> Give this prompt to an LLM with access to the cyberdecks.org codebase.
 > It references `AGENTS.md` §5 for the authoritative spec. The LLM should
 > read `AGENTS.md` and `src/db/schema.ts` before starting.
 
@@ -9,7 +9,7 @@
 ## Context
 
 You are implementing the access control and role progression system for
-cyberdeck.club, a community platform for cyberdeck builders. The application
+cyberdecks.org, a community platform for cyberdeck builders. The application
 uses Astro 6 (SSR), Drizzle ORM with Cloudflare D1 (SQLite), Resend for
 magic link authentication, and Tailwind CSS v4. Read `AGENTS.md` (especially
 §5 "Access Control & Role System") and `DESIGN.md` before writing any code.

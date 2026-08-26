@@ -1,6 +1,6 @@
 ---
 name: content-builder
-description: Creates and edits wiki articles, build showcases, meetup pages, static content pages, and forum announcements for cyberdeck.club following the site's design system and copy tone — plainspoken, warm, inclusive, encouraging, and specific.
+description: Creates and edits wiki articles, build showcases, meetup pages, static content pages, and forum announcements for cyberdecks.org following the site's design system and copy tone — plainspoken, warm, inclusive, encouraging, and specific.
 ---
 
 # Content Page Builder

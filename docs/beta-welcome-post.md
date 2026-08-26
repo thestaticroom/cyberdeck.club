@@ -1,9 +1,9 @@
-<!-- Thread Title: Welcome to cyberdeck.club beta! 🛠️ -->
+<!-- Thread Title: Welcome to cyberdecks.org beta! 🛠️ -->
 <!-- Category: general OR announcements -->
 
-# Welcome to cyberdeck.club beta! 🛠️
+# Welcome to cyberdecks.org beta! 🛠️
 
-Hey y'all — thanks for being here. Seriously. You're among the first people to poke around cyberdeck.club, and that means a lot.
+Hey y'all — thanks for being here. Seriously. You're among the first people to poke around cyberdecks.org, and that means a lot.
 
 I'm building this platform because I wanted a space where cyberdeck builders — especially women, femmes, queer folks, beginners, and anyone who's ever been told "that's not how it's done" — could share what they're making without having to prove they belong first. You belong here before you do anything.
 
@@ -15,7 +15,7 @@ This post walks you through what's here, how beta works, and how you can help sh
 
 ## 🗺️ What's here (and where to find it)
 
-cyberdeck.club has four main sections:
+cyberdecks.org has four main sections:
 
 - **[Wiki](/wiki/)** — Community-written articles about cyberdeck building. Techniques, component guides, inspiration boards. If you have maker-level access, you can create and edit pages.
 - **[Forum](/forum/)** — Where conversations happen. Ask questions, share ideas, help each other out. No question is too basic.
@@ -43,16 +43,6 @@ There's a **💬 button in the bottom-right corner of every page**. Tap it, desc
 You can view all the feedback you've submitted at **[/my-feedback](/my-feedback/)**.
 
 That's the fastest way to report bugs, suggest features, or flag anything that feels confusing or unwelcoming. Even small things ("this button label confused me") are genuinely helpful.
-
----
-
-## 🗓️ How to see the roadmap
-
-If you want to see what's being worked on, what's coming next, or where your feedback ended up, the roadmap lives in a public GitHub Project:
-
-👉 **[cyberdeck.club roadmap](https://github.com/orgs/cyberdeck-club/projects/1)**
-
-You can see what's in progress, what's planned, and what's been shipped. Feedback you submit through the widget gets tracked there too.
 
 ---
 

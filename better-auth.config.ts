@@ -89,7 +89,7 @@ const auth = betterAuth({
     },
   },
   secret: process.env.BETTER_AUTH_SECRET ?? 'dev-secret-change-in-production',
-  trustedOrigins: ['http://localhost:4321', 'https://cyberdeck.club'],
+  trustedOrigins: ['http://localhost:4321', 'https://cyberdecks.org'],
   baseURL: process.env.PUBLIC_BASE_URL ?? 'http://localhost:4321',
 });
 

@@ -1,10 +1,10 @@
 # MCP Server — Setup and Usage Guide
 
-The cyberdeck.club MCP (Model Context Protocol) server enables AI assistants to interact with the cyberdeck.club API on behalf of users. It exposes tools for managing builds, wiki articles, forum threads, meetups, and user profiles.
+The cyberdecks.org MCP (Model Context Protocol) server enables AI assistants to interact with the cyberdecks.org API on behalf of users. It exposes tools for managing builds, wiki articles, forum threads, meetups, and user profiles.
 
 ## What is MCP?
 
-The [Model Context Protocol](https://modelcontextprotocol.io/) is a standardized way for AI assistants to connect to external tools and data sources. The cyberdeck.club MCP server acts as a bridge — it maps MCP tool calls to the cyberdeck.club REST API, using Personal Access Tokens (PATs) for authentication.
+The [Model Context Protocol](https://modelcontextprotocol.io/) is a standardized way for AI assistants to connect to external tools and data sources. The cyberdecks.org MCP server acts as a bridge — it maps MCP tool calls to the cyberdecks.org REST API, using Personal Access Tokens (PATs) for authentication.
 
 ---
 
@@ -12,7 +12,7 @@ The [Model Context Protocol](https://modelcontextprotocol.io/) is a standardized
 
 ### 1. Create a Personal Access Token
 
-1. Log in to [cyberdeck.club](https://cyberdeck.club)
+1. Log in to [cyberdecks.org](https://cyberdecks.org)
 2. Go to **Settings → Personal Access Tokens**
 3. Create a new token with the scopes you need
 4. Copy the token immediately — it is only shown once
@@ -43,14 +43,14 @@ Configure your AI assistant or MCP client to use the server. See [Claude Desktop
 
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
-| `CYBERDECK_PAT` | Yes | — | Personal Access Token from cyberdeck.club/settings |
-| `CYBERDECK_API_URL` | No | `https://cyberdeck.club` | Base URL of the cyberdeck.club API |
+| `CYBERDECK_PAT` | Yes | — | Personal Access Token from cyberdecks.org/settings |
+| `CYBERDECK_API_URL` | No | `https://cyberdecks.org` | Base URL of the cyberdecks.org API |
 
 Set the PAT before starting the server:
 
 ```bash
 export CYBERDECK_PAT="cdc_a1b2c3d4e5f6..."
-npx @cyberdeck-club/mcp-server
+npx @cyberdecks.org/mcp-server
 ```
 
 Or pass it inline:
@@ -63,7 +63,7 @@ CYBERDECK_PAT="cdc_a1b2c3d4e5f6..." npx @cyberdeck-club/mcp-server
 
 ## Claude Desktop Setup
 
-Add the cyberdeck.club MCP server to your Claude Desktop configuration:
+Add the cyberdecks.org MCP server to your Claude Desktop configuration:
 
 **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
 
@@ -98,7 +98,7 @@ CYBERDECK_PAT=your_token node ./node_modules/@cyberdeck-club/mcp-server/dist/ind
 Or with a custom API URL:
 
 ```bash
-CYBERDECK_PAT=your_token CYBERDECK_API_URL=https://beta.cyberdeck.club node ./node_modules/@cyberdeck-club/mcp-server/dist/index.js
+CYBERDECK_PAT=your_token CYBERDECK_API_URL=https://beta.cyberdecks.org node ./node_modules/@cyberdeck-club/mcp-server/dist/index.js
 ```
 
 ---
@@ -184,7 +184,7 @@ To build and run the MCP server from the repository source:
 
 ```bash
 # Clone the repository
-git clone https://github.com/cyberdeck-club/cyberdeck.club.git
+git clone https://github.com/thestaticroom/cyberdeck.club.git
 cd cyberdeck.club/mcp-server
 
 # Install dependencies
@@ -245,13 +245,13 @@ Your account has been suspended. Contact a moderator or admin for more informati
 
 If you see connection errors when the server starts:
 
-1. Verify `CYBERDECK_API_URL` is correct (use `https://cyberdeck.club` for production)
+1. Verify `CYBERDECK_API_URL` is correct (use `https://cyberdecks.org` for production)
 2. Check your network connection
-3. Verify the cyberdeck.club API is operational at [status.cyberdeck.club](https://status.cyberdeck.club)
+3. Verify the cyberdecks.org API is operational at [status.cyberdecks.org](https://status.cyberdecks.org)
 
 ### MCP client not finding the server
 
-1. Verify the server package is installed: `npm list @cyberdeck-club/mcp-server`
+1. Verify the server package is installed: `npm list @cyberdecks.org/mcp-server`
 2. Check that the `command` and `args` in your MCP client config match the examples
 3. Try running the server directly to see error output: `CYBERDECK_PAT=... node ./node_modules/@cyberdeck-club/mcp-server/dist/index.js`
 

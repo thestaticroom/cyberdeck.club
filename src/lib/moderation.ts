@@ -1,5 +1,5 @@
 /**
- * Build moderation pipeline for cyberdeck.club.
+ * Build moderation pipeline for cyberdecks.org.
  *
  * This module handles automated content review of build submissions.
  * The first pass uses basic validation checks to catch obvious spam

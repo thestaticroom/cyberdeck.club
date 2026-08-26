@@ -1,5 +1,5 @@
 /**
- * BetaAcknowledgementModal - Beta disclaimer modal for beta.cyberdeck.club
+ * BetaAcknowledgementModal - Beta disclaimer modal for beta.cyberdecks.org
  * Shows on first visit to beta domain and doesn't reappear after acknowledgement.
  */
 
@@ -21,7 +21,7 @@ export function BetaAcknowledgementModal() {
   useEffect(() => {
     // Check if we're on the beta domain
     const isBetaDomain = 
-      (window.location.hostname === "beta.cyberdeck.club")
+      (window.location.hostname === "beta.cyberdecks.org")
       || window.location.search.includes("beta=true");
 
     // Check if already acknowledged
@@ -96,7 +96,7 @@ export function BetaAcknowledgementModal() {
           }}
         >
           <p style={{ margin: 0, color: "var(--text)", lineHeight: 1.6 }}>
-            Hey there! You're on the beta version of cyberdeck.club — this is where
+            Hey there! You're on the beta version of cyberdecks.org This is where
             we test out new features and squash bugs before they go live.
           </p>
 
@@ -122,7 +122,7 @@ export function BetaAcknowledgementModal() {
           </p>
 
           <p style={{ margin: 0, color: "var(--text)", lineHeight: 1.6 }}>
-            Thanks for helping us make cyberdeck.club better for everyone. 💖
+            Thanks for helping us make cyberdecks.org better for everyone. 💖
           </p>
         </div>
 

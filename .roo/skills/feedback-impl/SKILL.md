@@ -1,6 +1,6 @@
 ---
 name: feedback-impl
-description: Implements bugfixes or features based on cyberdeck.club GitHub feedback issues — reads the issue for context, writes an implementation plan comment, executes the code changes following project conventions, then posts a completion summary with files changed and testing notes back to the issue. Use when asked to implement, fix, or build something from a GitHub feedback issue number.
+description: Implements bugfixes or features based on cyberdecks.org GitHub feedback issues — reads the issue for context, writes an implementation plan comment, executes the code changes following project conventions, then posts a completion summary with files changed and testing notes back to the issue. Use when asked to implement, fix, or build something from a GitHub feedback issue number.
 ---
 
 # Feedback Implementation
@@ -15,14 +15,14 @@ description: Implements bugfixes or features based on cyberdeck.club GitHub feed
 
 - **Triaging** feedback issues (categorizing, labeling, prioritizing) — use the `feedback-triage` skill in community-manager mode
 - Creating feedback issues — the in-app widget handles that
-- Issues unrelated to cyberdeck.club (different repo or non-code tasks)
+- Issues unrelated to cyberdecks.org (different repo or non-code tasks)
 - Pure refactoring or tasks not driven by a feedback issue
 
 ## Repository
 
 | Field | Value |
 |-------|-------|
-| Owner | `cyberdeck-club` |
+| Owner | `thestaticroom` |
 | Repo | `cyberdeck.club` |
 | Project | `1` (org-level ProjectV2) |
 
@@ -53,7 +53,7 @@ Feedback issues from the widget contain:
 
 The user provides a GitHub issue number (e.g., `#42`).
 
-Use `get_issue` on `cyberdeck-club/cyberdeck.club` to read:
+Use `get_issue` on `thestaticroom/cyberdeck.club` to read:
 - Full issue body (page URL, description, screenshots)
 - Labels (category: `bug`, `feature-request`, `ux-improvement`, etc.)
 - Priority label if present (`priority:p0` through `priority:p3`)

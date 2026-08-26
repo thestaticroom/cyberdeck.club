@@ -1,7 +1,7 @@
 /**
  * BetaGateModal - Multi-state modal for beta access gating
  * 
- * Gates access to beta.cyberdeck.club with the following states:
+ * Gates access to beta.cyberdecks.org with the following states:
  * - idle: Not a beta site, render nothing
  * - signup: 5-field form for requesting beta access
  * - submitting: Loading state while submitting
@@ -79,7 +79,7 @@ export function BetaGateModal({ isAuthenticated }: BetaGateModalProps) {
   // Beta detection
   const isBetaDomain =
     typeof window !== "undefined" &&
-    (window.location.hostname === "beta.cyberdeck.club" ||
+    (window.location.hostname === "beta.cyberdecks.org" ||
       window.location.search.includes("beta=true"));
 
   // Check status on mount
@@ -505,7 +505,7 @@ export function BetaGateModal({ isAuthenticated }: BetaGateModalProps) {
               lineHeight: 1.2,
             }}
           >
-            cyberdeck.club
+            cyberdecks.org
           </h2>
           <p
             style={{
@@ -530,7 +530,7 @@ export function BetaGateModal({ isAuthenticated }: BetaGateModalProps) {
                 fontSize: "0.95rem",
               }}
             >
-              We're opening cyberdeck.club to a small group of beta testers. It takes about 30 seconds to request access, and a real person reviews every request (usually within a day or two).
+              We're opening cyberdecks.org to a small group of beta testers. It takes about 30 seconds to request access, and a real person reviews every request (usually within a day or two).
             </p>
 
             <form onSubmit={handleSubmit} noValidate>

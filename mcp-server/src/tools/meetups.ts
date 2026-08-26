@@ -38,7 +38,7 @@ function handleApiError(err: unknown, context: string): McpToolResult {
         content: [
           {
             type: "text" as const,
-            text: `Authentication failed: ${err.message}. Your token may be expired or revoked. Create a new token at https://cyberdeck.club/settings`,
+            text: `Authentication failed: ${err.message}. Your token may be expired or revoked. Create a new token at https://cyberdecks.org/settings`,
           },
         ],
         isError: true,

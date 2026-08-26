@@ -11,7 +11,7 @@
 
 import { getResend } from "./resend";
 
-const FROM_ADDRESS = "cyberdeck.club <builds@cyberdeck.club>";
+const FROM_ADDRESS = "cyberdecks.org <builds@cyberdecks.org>";
 
 /**
  * Send a "needs revision" email to a build author.
@@ -25,7 +25,7 @@ export async function sendBuildNeedsRevisionEmail(opts: {
   feedback: string;
   siteUrl?: string;
 }): Promise<void> {
-  const { to, displayName, buildTitle, buildSlug, feedback, siteUrl = "https://cyberdeck.club" } = opts;
+  const { to, displayName, buildTitle, buildSlug, feedback, siteUrl = "https://cyberdecks.org" } = opts;
   const editUrl = `${siteUrl}/builds/${buildSlug}/edit`;
 
   const resend = getResend();
@@ -80,7 +80,7 @@ export async function sendBuildNeedsRevisionEmail(opts: {
 </body>
 </html>
       `.trim(),
-      text: `Hey ${displayName}!\n\nThanks for submitting "${buildTitle}" — we love seeing what you're building! A reviewer took a look and had some feedback to help get it ready for the gallery.\n\nReviewer Feedback:\n${feedback}\n\nNo pressure — take your time, make the tweaks that feel right, and resubmit whenever you're ready. We'd love to see this in the gallery.\n\nEdit your build: ${editUrl}\n\nYou can also find all your builds at ${siteUrl}/builds/mine\n\n— cyberdeck.club`,
+      text: `Hey ${displayName}!\n\nThanks for submitting "${buildTitle}" — we love seeing what you're building! A reviewer took a look and had some feedback to help get it ready for the gallery.\n\nReviewer Feedback:\n${feedback}\n\nNo pressure — take your time, make the tweaks that feel right, and resubmit whenever you're ready. We'd love to see this in the gallery.\n\nEdit your build: ${editUrl}\n\nYou can also find all your builds at ${siteUrl}/builds/mine\n\n— cyberdecks.org`,
     });
   } catch (err) {
     console.error("[build-emails] Failed to send needs-revision email:", err);
@@ -98,7 +98,7 @@ export async function sendBuildApprovedEmail(opts: {
   buildSlug: string;
   siteUrl?: string;
 }): Promise<void> {
-  const { to, displayName, buildTitle, buildSlug, siteUrl = "https://cyberdeck.club" } = opts;
+  const { to, displayName, buildTitle, buildSlug, siteUrl = "https://cyberdecks.org" } = opts;
   const buildUrl = `${siteUrl}/builds/${buildSlug}`;
 
   const resend = getResend();
@@ -125,7 +125,7 @@ export async function sendBuildApprovedEmail(opts: {
 
     <p style="font-size: 16px; line-height: 1.6; margin: 0 0 16px;">
       <strong>"${buildTitle}"</strong> has been approved and is now part of the
-      cyberdeck.club gallery. The community can see it, be inspired by it,
+      cyberdecks.org gallery. The community can see it, be inspired by it,
       and learn from what you made. That's amazing.
     </p>
 
@@ -147,7 +147,7 @@ export async function sendBuildApprovedEmail(opts: {
 </body>
 </html>
       `.trim(),
-      text: `${displayName}! Your build is live!\n\n"${buildTitle}" has been approved and is now part of the cyberdeck.club gallery. The community can see it, be inspired by it, and learn from what you made. That's amazing.\n\nShare it around, show your friends, brag a little — you built a whole cyberdeck and it deserves to be seen.\n\nSee your build: ${buildUrl}\n\nKeep building! You can submit more builds anytime from ${siteUrl}/builds/mine\n\n— cyberdeck.club`,
+      text: `${displayName}! Your build is live!\n\n"${buildTitle}" has been approved and is now part of the cyberdecks.org gallery. The community can see it, be inspired by it, and learn from what you made. That's amazing.\n\nShare it around, show your friends, brag a little — you built a whole cyberdeck and it deserves to be seen.\n\nSee your build: ${buildUrl}\n\nKeep building! You can submit more builds anytime from ${siteUrl}/builds/mine\n\n— cyberdecks.org`,
     });
   } catch (err) {
     console.error("[build-emails] Failed to send build-approved email:", err);
@@ -175,7 +175,7 @@ export async function sendBuildResubmittedAdminEmail(opts: {
     buildTitle,
     builderDisplayName,
     buildSlug,
-    siteUrl = "https://cyberdeck.club",
+    siteUrl = "https://cyberdecks.org",
   } = opts;
 
   if (!adminEmail) return;
@@ -186,7 +186,7 @@ export async function sendBuildResubmittedAdminEmail(opts: {
     await resend.emails.send({
       from: fromAddress,
       to: adminEmail,
-      subject: `[cyberdeck.club] Build resubmitted for review: ${buildTitle}`,
+      subject: `[cyberdecks.org] Build resubmitted for review: ${buildTitle}`,
       html: `
         <h2>Build Resubmitted for Review</h2>
         <p><strong>${builderDisplayName.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</strong> has revised and resubmitted a build that is waiting for human review.</p>
@@ -202,7 +202,7 @@ export async function sendBuildResubmittedAdminEmail(opts: {
         </table>
         <p><a href="${siteUrl}/admin/builds">Review in the moderation queue →</a></p>
         <p><a href="${siteUrl}/builds/${buildSlug}">View the build →</a></p>
-        <p><em>Sent automatically by cyberdeck.club</em></p>
+        <p><em>Sent automatically by cyberdeck.org</em></p>
       `,
     });
   } catch (err) {

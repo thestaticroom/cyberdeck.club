@@ -1,6 +1,6 @@
 ---
 name: cf-observability
-description: Monitors cyberdeck.club Cloudflare Workers infrastructure health using the Cloudflare Observability MCP server — queries request logs, error rates, latency metrics, Worker status for both production and beta environments, and generates infrastructure health reports.
+description: Monitors cyberdecks.org Cloudflare Workers infrastructure health using the Cloudflare Observability MCP server — queries request logs, error rates, latency metrics, Worker status for both production and beta environments, and generates infrastructure health reports.
 ---
 
 # Cloudflare Observability
@@ -8,7 +8,7 @@ description: Monitors cyberdeck.club Cloudflare Workers infrastructure health us
 ## When to Use
 
 - Admin or community manager asks for an **infrastructure health check**
-- Investigating **errors, latency spikes, or traffic anomalies** on cyberdeck.club
+- Investigating **errors, latency spikes, or traffic anomalies** on cyberdecks.org
 - Generating a **Cloudflare infrastructure report**
 - Checking **Worker deployment status** for prod or beta
 - Analyzing **request logs** or **error patterns** by route
@@ -28,12 +28,12 @@ description: Monitors cyberdeck.club Cloudflare Workers infrastructure health us
 - The **Cloudflare Observability MCP server** must be configured and connected (remote SSE at `observability.mcp.cloudflare.com`)
 - All MCP tools are prefixed with `cloudflare--` in the tool namespace (e.g., `cloudflare--query_worker_observability`)
 
-## cyberdeck.club Infrastructure
+## cyberdecks.org Infrastructure
 
 | Resource | Name | Domain / Binding | Notes |
 |----------|------|-------------------|-------|
-| Worker (prod) | `cyberdeck-club` | `cyberdeck.club` | Astro SSR, manual workflow dispatch deploy |
-| Worker (beta) | `cyberdeck-club-beta` | `beta.cyberdeck.club` | Astro SSR, auto-deployed on push to `main` |
+| Worker (prod) | `cyberdecks.org` | `cyberdecks.org` | Astro SSR, manual workflow dispatch deploy |
+| Worker (beta) | `cyberdecks-beta` | `beta.cyberdecks.org` | Astro SSR, auto-deployed on push to `main` |
 | D1 (prod) | `cyberdeck-db` | binding `DB` | SQLite at edge |
 | D1 (beta) | `cyberdeck-db-beta` | binding `DB` | SQLite at edge |
 | R2 Bucket | `cyberdeck-club-media` | binding `MEDIA` | User uploads, feedback screenshots |
@@ -62,7 +62,7 @@ All tools are under the `cloudflare--` prefix. Use the prefixed form in tool cal
 
 ### Step 1 — Account Setup (required every session)
 
-1. Call `cloudflare--accounts_list` to identify the cyberdeck.club Cloudflare account.
+1. Call `cloudflare--accounts_list` to identify the cyberdecks.org Cloudflare account.
 2. Call `cloudflare--set_active_account` with the correct account ID.
 3. Confirm the account is set before proceeding.
 
@@ -148,16 +148,16 @@ Format the final report using this template:
 ### Production: `cyberdeck-club`
 | Metric | Value | Status |
 |--------|-------|--------|
-| Domain | cyberdeck.club | ✅/⚠️ |
+| Domain | cyberdecks.org | ✅/⚠️ |
 | Last Deploy | [date] | — |
 | Requests (24h) | [count] | — |
 | Error Rate | [%] | ✅/⚠️/🔴 |
 | P99 Latency | [ms] | ✅/⚠️/🔴 |
 
-### Beta: `cyberdeck-club-beta`
+### Beta: `cyberdecks-beta`
 | Metric | Value | Status |
 |--------|-------|--------|
-| Domain | beta.cyberdeck.club | ✅/⚠️ |
+| Domain | beta.cyberdecks.org | ✅/⚠️ |
 | Last Deploy | [date] | — |
 | Requests (24h) | [count] | — |
 | Error Rate | [%] | ✅/⚠️/🔴 |

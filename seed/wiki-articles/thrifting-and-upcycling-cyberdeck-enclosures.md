@@ -184,19 +184,19 @@ Sometimes the enclosure you fell in love with just doesn't work. The parts don't
 
 This is normal and it happens to everyone — beginners and experienced builders alike. A few things to keep in mind:
 
-**Your first build doesn't have to be your forever build.** Many builders treat their first enclosure as a learning experience and move the components to a better case later. The Pi, the screen, the keyboard, and the battery are all reusable. The only thing "lost" is the enclosure and your time — and the time was spent learning.
+**Your first build doesn't have to be your forever build.** Many builders treat their first enclosure as a learning experience and move the components to a better case later. The Pi, the screen, the keyboard, and the battery are all reusable. The only thing "lost" is the enclosure and your time - and the time was spent learning.
 
 **A bad enclosure choice isn't wasted money.** If you thrifted it for $3, you spent $3 on a lesson about what does and doesn't work as a cyberdeck case. That's cheaper than most tutorials.
 
-**The community has seen it all.** If you're struggling with fit, structural integrity, or fabrication, post in the [Cyberdeck Cafe Discord](https://cyberdeck.cafe), the [cyberdeck.club forum](/forum), or even the TikTok comments of a builder whose work you admire. People are genuinely helpful, and someone has probably solved the exact problem you're facing.
+**The community has seen it all.** If you're struggling with fit, structural integrity, or fabrication, post in the [Cyberdeck Cafe Discord](https://cyberdeck.cafe), the [cyberdeck.org forum](/forum), or even the TikTok comments of a builder whose work you admire. People are genuinely helpful, and someone has probably solved the exact problem you're facing.
 
 ## Gallery of Thrifted Enclosure Ideas
 
-This isn't exhaustive — it's a starting point to jog your imagination. Every one of these has been used in a real build.
+This isn't exhaustive - it's a starting point to jog your imagination. Every one of these has been used in a real build.
 
 **From the purse section:** Clamshell purses, hard-shell clutches, vintage beaded bags with rigid frames, seashell purses, lucite box purses, wicker baskets with lids.
 
-**From the toy section:** Polly Pocket compacts, Fisher-Price medical kits, vintage metal lunchboxes (Transformers, Barbie, Star Wars — all appear regularly), plastic dinosaur figures (hollow them out), Bop It housings, toy laptops from VTech or LeapFrog, Game Boy shells.
+**From the toy section:** Polly Pocket compacts, Fisher-Price medical kits, vintage metal lunchboxes (Transformers, Barbie, Star Wars - all appear regularly), plastic dinosaur figures (hollow them out), Bop It housings, toy laptops from VTech or LeapFrog, Game Boy shells.
 
 **From the kitchen section:** Bento boxes, bread tins, cookie tins, tea caddies, picnic sets with rigid cases, vintage Tupperware, cigar boxes.
 

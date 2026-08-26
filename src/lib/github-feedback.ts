@@ -61,7 +61,7 @@ export async function ensureUserLabel(userId: string): Promise<void> {
   const labelName = `user:${userId}`;
 
   const response = await fetch(
-    "https://api.github.com/repos/cyberdeck-club/cyberdeck.club/labels",
+    "https://api.github.com/repos/thestaticroom/cyberdeck.club/labels",
     {
       method: "POST",
       headers: {
@@ -159,7 +159,7 @@ export async function createFeedbackIssue(
   ].join("\n");
 
   const response = await fetch(
-    "https://api.github.com/repos/cyberdeck-club/cyberdeck.club/issues",
+    "https://api.github.com/repos/thestaticroom/cyberdeck.club/issues",
     {
       method: "POST",
       headers: {
@@ -361,7 +361,7 @@ export async function fetchUserFeedbackIssues(
     const labelFilter = `user:${userId},feedback`;
 
     const url = new URL(
-      "https://api.github.com/repos/cyberdeck-club/cyberdeck.club/issues"
+      "https://api.github.com/repos/thestaticroom/cyberdeck.club/issues"
     );
     url.searchParams.set("labels", labelFilter);
     url.searchParams.set("state", "all");

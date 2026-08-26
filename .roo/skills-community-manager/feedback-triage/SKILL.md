@@ -1,6 +1,6 @@
 ---
 name: feedback-triage
-description: Reviews, categorizes, labels, and prioritizes user feedback issues on the cyberdeck.club GitHub repository. Triages feedback from the in-app widget into bugs, feature requests, and UX issues, updates labels and project board status, and generates feedback summary reports. Use when asked to triage feedback, review feedback issues, categorize user reports, or generate a feedback summary.
+description: Reviews, categorizes, labels, and prioritizes user feedback issues on the cyberdecks.org GitHub repository. Triages feedback from the in-app widget into bugs, feature requests, and UX issues, updates labels and project board status, and generates feedback summary reports. Use when asked to triage feedback, review feedback issues, categorize user reports, or generate a feedback summary.
 ---
 
 # Feedback Triage
@@ -17,13 +17,13 @@ description: Reviews, categorizes, labels, and prioritizes user feedback issues 
 
 - Managing forum threads, wiki edits, or build moderation — use the appropriate community-manager skill instead
 - Creating feedback issues (the widget handles that automatically)
-- Anything requiring the cyberdeck.club MCP server — this skill uses the **GitHub MCP server** (`github--` prefixed tools) exclusively
+- Anything requiring the cyberdecks.org MCP server — this skill uses the **GitHub MCP server** (`github--` prefixed tools) exclusively
 
 ## Repository
 
 | Field | Value |
 |-------|-------|
-| Owner | `cyberdeck-club` |
+| Owner | `thestaticroom` |
 | Repo | `cyberdeck.club` |
 | Project | `1` (org-level ProjectV2) |
 

@@ -1,6 +1,6 @@
 ---
 name: safety-management
-description: Handles harassment and safety incidents for cyberdeck.club end-to-end — evidence gathering across content surfaces, pattern analysis of harmful behavior, severity assessment on a 4-level scale, enforcement recommendations (warnings, bans), and draft communications following community tone guidelines.
+description: Handles harassment and safety incidents for cyberdecks.org end-to-end — evidence gathering across content surfaces, pattern analysis of harmful behavior, severity assessment on a 4-level scale, enforcement recommendations (warnings, bans), and draft communications following community tone guidelines.
 ---
 
 # Safety Incident Management
@@ -179,7 +179,7 @@ We value your contributions to the community and hope we can move forward positi
 
 #### Ban Notification (Level 3–4)
 ```
-Hi {name}, after reviewing recent activity on your account, we've made the difficult decision to {temporarily restrict / permanently suspend} your access to cyberdeck.club.
+Hi {name}, after reviewing recent activity on your account, we've made the difficult decision to {temporarily restrict / permanently suspend} your access cyberdecks.org.
 
 This is in response to {specific behavior — cite incidents without naming other users}.
 

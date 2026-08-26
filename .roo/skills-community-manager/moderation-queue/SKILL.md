@@ -1,6 +1,6 @@
 ---
 name: moderation-queue
-description: Walks through pending builds, flagged content, and reported posts in the cyberdeck.club moderation queue. Reviews content against community guidelines and auto-review results, checks author context, and produces approve/reject/needs-edit recommendations with reasoning.
+description: Walks through pending builds, flagged content, and reported posts in the cyberdecks.org moderation queue. Reviews content against community guidelines and auto-review results, checks author context, and produces approve/reject/needs-edit recommendations with reasoning.
 ---
 
 # Moderation Queue

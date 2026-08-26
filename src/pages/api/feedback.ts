@@ -117,7 +117,7 @@ export const POST: APIRoute = async (ctx) => {
       submitterName: user.name,
       submitterId: user.id,
       submitterUsername: user.name,
-      baseUrl: (env as App.Env).PUBLIC_BASE_URL ?? "https://cyberdeck.club",
+      baseUrl: (env as App.Env).PUBLIC_BASE_URL ?? "https://cyberdecks.org",
       autoScreenshotUrl,
       userScreenshotUrls,
       submittedAt: new Date().toISOString(),

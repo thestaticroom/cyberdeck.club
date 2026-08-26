@@ -1,5 +1,5 @@
 /**
- * Account deletion logic for cyberdeck.club.
+ * Account deletion logic for cyberdecks.org.
  *
  * Reassigns all user-authored content to a system [deleted] user AND
  * scrubs the content body to '[deleted]' so no remnant copy remains.
@@ -37,7 +37,7 @@ const SCRUBBED = "[deleted]";
 export const DELETED_USER_ID = "system-deleted-user";
 
 /** Email address used by the system [deleted] user (not a real mailbox). */
-export const DELETED_USER_EMAIL = "deleted@system.cyberdeck.club";
+export const DELETED_USER_EMAIL = "deleted@system.cyberdecks.org";
 
 /**
  * Ensures the system [deleted] user exists and returns its ID.
@@ -344,24 +344,24 @@ export async function sendAccountDeletionEmails(options: {
   // ── Email to the deleted user ───────────────────────────────────────
   const userSubject =
     deletedBy === "self"
-      ? "Your cyberdeck.club account has been deleted"
-      : "Your cyberdeck.club account has been deleted by an administrator";
+      ? "Your cyberdecks.org account has been deleted"
+      : "Your cyberdecks.org account has been deleted by an administrator";
 
   const userBody =
     deletedBy === "self"
       ? `
         <h1>Goodbye, ${displayName} 💜</h1>
-        <p>Your cyberdeck.club account has been deleted as you requested.</p>
+        <p>Your cyberdecks.org account has been deleted as you requested.</p>
         <p>All of your content (builds, forum posts, wiki edits, and comments)
         has been anonymized — it's no longer linked to your name or profile.</p>
         <p>We're sorry to see you go. If you ever want to come back and share
         your builds with us again, you're always welcome.</p>
-        <p>Take care,<br/>The cyberdeck.club community</p>
+        <p>Take care,<br/>The cyberdecks.org community</p>
       `
       : `
         <h1>Account deletion notice</h1>
         <p>Hi ${displayName},</p>
-        <p>Your cyberdeck.club account has been deleted by an administrator.</p>
+        <p>Your cyberdecks.org account has been deleted by an administrator.</p>
         <p>All of your content (builds, forum posts, wiki edits, and comments)
         has been anonymized — it's no longer linked to your name or profile.</p>
         ${adminNote
@@ -373,7 +373,7 @@ export async function sendAccountDeletionEmails(options: {
       }
         <p>If you believe this was done in error, you can reach out to us by
         replying to this email.</p>
-        <p>— The cyberdeck.club team</p>
+        <p>— The cyberdecks.org team</p>
       `;
 
   try {
@@ -396,7 +396,7 @@ export async function sendAccountDeletionEmails(options: {
       : `Admin: ${adminName ?? "unknown"}`;
 
   const adminBody = `
-    <h1>Account deleted on cyberdeck.club</h1>
+    <h1>Account deleted on cyberdecks.org</h1>
     <p><strong>User:</strong> ${deletedUserName}</p>
     <p><strong>Email:</strong> ${deletedUserEmail}</p>
     <p><strong>Deleted by:</strong> ${initiator}</p>
@@ -415,7 +415,7 @@ export async function sendAccountDeletionEmails(options: {
     await resend.emails.send({
       from: fromAddress,
       to: adminEmail,
-      subject: `[cyberdeck.club] Account deleted: ${deletedUserName}`,
+      subject: `[cyberdecks.org] Account deleted: ${deletedUserName}`,
       html: adminBody,
     });
   } catch (err) {

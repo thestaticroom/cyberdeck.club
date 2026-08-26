@@ -1,5 +1,5 @@
 /**
- * Role-based access control system for cyberdeck.club.
+ * Role-based access control system for cyberdecks.org.
  *
  * Better Auth uses string roles stored in the database.
  * This module maps string roles to numeric levels for hierarchical permission checks.

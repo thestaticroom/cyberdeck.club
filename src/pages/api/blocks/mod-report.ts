@@ -81,7 +81,7 @@ export const POST: APIRoute = async (ctx) => {
       cfEnv.EMAIL_FROM ??
       cfEnv.RESEND_FROM_ADDRESS ??
       import.meta.env.RESEND_FROM_ADDRESS ??
-      "cyberdeck.club <noreply@cyberdeck.club>";
+      "cyberdecks.org <noreply@cyberdecks.org>";
 
     const blockerName =
       typeof authedUser.name === "string" ? authedUser.name : "Unknown User";
