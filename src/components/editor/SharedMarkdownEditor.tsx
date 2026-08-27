@@ -187,14 +187,24 @@ export function SharedMarkdownEditor({
       buttons.push(<BoldItalicUnderlineToggles key="boldItalic" />);
     }
 
-        if (config.links) {
+            if (config.links) {
       buttons.push(
-        <span key="createLinkWrapper" onMouseDown={(e) => e.preventDefault()}>
-          <CreateLink />
-        </span>
+        <button
+          key="customLink"
+          title="Insert Link"
+          className="mdxeditor-toolbar-button" 
+          onMouseDown={(e) => e.preventDefault()} // CRITICAL: Keeps text highlighted
+          onClick={() => {
+            const url = prompt("Enter the URL:");
+            if (url) {
+              document.execCommand("createLink", false, url);
+            }
+          }}
+        >
+          🔗
+        </button>
       );
     }
-
     return <DiffSourceToggleWrapper>{buttons}</DiffSourceToggleWrapper>;
   };
 
