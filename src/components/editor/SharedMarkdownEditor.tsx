@@ -206,6 +206,7 @@ export function SharedMarkdownEditor({
     tablePlugin(),
     headingsPlugin(),
     linkPlugin(),
+    linkDialogPlugin(),
     listsPlugin(),
     quotePlugin(),
     codeBlockPlugin(),
