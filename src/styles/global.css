@@ -466,9 +466,23 @@ html, body {
   border-radius: 2px;
 }
 
-/* Force MDXEditor link dialog to the absolute front */
-[data-radix-popper-content-wrapper],
-[role="dialog"],
-.mdxeditor-link-dialog {
-  z-index: 99999 !important;
+/* NUCLEAR FIX: Force MDXEditor Link Dialog visible */
+div[role="dialog"],
+div[data-radix-popper-content-wrapper] {
+  z-index: 999999 !important;
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  background-color: #ffffff !important;
+  border: 2px solid #000000 !important;
+  padding: 1.5rem !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6) !important;
+  color: #000000 !important;
+  min-width: 300px !important;
+}
+
+div[role="dialog"] * {
+  color: #000000 !important;
 }
