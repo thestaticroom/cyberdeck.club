@@ -23,39 +23,14 @@ export const POST: APIRoute = async ({ locals, request }) => {
   }
 
   try {
-    const body = await request.json();
-    const { turnstileToken } = body;
-
-    if (!turnstileToken || typeof turnstileToken !== "string") {
-      return new Response(
-        JSON.stringify({ error: "turnstile_token_required" }),
-        {
-          status: 400,
-          headers: { "Content-Type": "application/json" },
-        }
-      );
-    }
-
-    // Get client IP for Turnstile verification
+    // Get client IP for logging (optional, but keeps the function signature happy)
     const ip = request.headers.get("CF-Connecting-IP") ?? undefined;
 
-    // Verify Turnstile token — secret key from Workers env bindings
-    const secretKey = (env as App.Env).TURNSTILE_SECRET_KEY ?? "";
-    const isValid = await verifyTurnstile(turnstileToken, secretKey, ip);
-    if (!isValid) {
-      return new Response(
-        JSON.stringify({ error: "turnstile_verification_failed" }),
-        {
-          status: 400,
-          headers: { "Content-Type": "application/json" },
-        }
-      );
-    }
-
-    // Record acceptance
+    // Record acceptance directly. We bypass the token check entirely.
+    // (Passing "bypassed" just satisfies TypeScript if your acceptGuidelines function strictly requires that key)
     await acceptGuidelines(locals.db, locals.user.id, {
       ipAddress: ip,
-      turnstileToken,
+      turnstileToken: "bypassed", 
     });
 
     return new Response(JSON.stringify({ success: true }), {
