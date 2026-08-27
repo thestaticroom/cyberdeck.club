@@ -15,6 +15,7 @@ import {
   CreateLink,
   headingsPlugin,
   linkPlugin,
+  linkDialogPlugin,
   listsPlugin,
   markdownShortcutPlugin,
   MDXEditor,
@@ -187,24 +188,7 @@ export function SharedMarkdownEditor({
     }
 
     if (config.links) {
-  buttons.push(
-    <button
-      key="createLink"
-      title="Insert Link"
-      className="mdxeditor-toolbar-button" // Use whatever class your other buttons use
-      onClick={(e) => {
-        e.preventDefault();
-        const url = prompt("Enter the URL:");
-        if (url) {
-          // This native command is deprecated but still universally supported 
-          // and is the most reliable way to force a link into a contenteditable area
-          document.execCommand("createLink", false, url);
-        }
-      }}
-    >
-      🔗
-    </button>
-  );
+  buttons.push(<CreateLink key="createLink" />);
 }
 
     return <DiffSourceToggleWrapper>{buttons}</DiffSourceToggleWrapper>;
