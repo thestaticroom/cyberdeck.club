@@ -187,26 +187,13 @@ export function SharedMarkdownEditor({
       buttons.push(<BoldItalicUnderlineToggles key="boldItalic" />);
     }
 
-    if (config.links) {
-  buttons.push(
-    <button
-      key="createLink"
-      title="Insert Link"
-      className="mdxeditor-toolbar-button" // Use whatever class your other buttons use
-      onClick={(e) => {
-        e.preventDefault();
-        const url = prompt("Enter the URL:");
-        if (url) {
-          // This native command is deprecated but still universally supported 
-          // and is the most reliable way to force a link into a contenteditable area
-          document.execCommand("createLink", false, url);
-        }
-      }}
-    >
-      🔗 {/* Or whatever icon your theme uses for links */}
-    </button>
-  );
-}
+        if (config.links) {
+      buttons.push(
+        <span key="createLinkWrapper" onMouseDown={(e) => e.preventDefault()}>
+          <CreateLink />
+        </span>
+      );
+    }
 
     return <DiffSourceToggleWrapper>{buttons}</DiffSourceToggleWrapper>;
   };
