@@ -465,3 +465,10 @@ html, body {
   outline-offset: 2px;
   border-radius: 2px;
 }
+
+/* Force MDXEditor link dialog to the absolute front */
+[data-radix-popper-content-wrapper],
+[role="dialog"],
+.mdxeditor-link-dialog {
+  z-index: 99999 !important;
+}
