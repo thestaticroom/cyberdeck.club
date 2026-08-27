@@ -12,5 +12,5 @@
 import { createAuthClient } from "better-auth/client";
 
 export const authClient = createAuthClient({
-  baseURL: import.meta.env.PUBLIC_BASE_URL ?? "http://localhost:8787",
+  baseURL: import.meta.env.PUBLIC_BASE_URL ?? (typeof window !== "undefined" ? window.location.origin : "https://cyberdecks.org"),
 });

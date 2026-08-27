@@ -881,24 +881,27 @@ function main() {
   console.log(`   ${manifest.meta.description}\n`);
 
   try {
-    seedAuth();
+    // We are ONLY seeding the wiki right now to avoid timeouts and forum errors
     seedWikiCategories();
     seedWikiArticles();
-    seedForumCategories();
-    seedForumThreads();
-    seedForumPosts();
-    seedMeetups();
-    seedBuilds();
-    seedAnnouncements();
-    seedCommunityGuidelinesAcceptances();
-    seedBuildComments();
-    seedWikiComments();
-    seedPersonalAccessTokens();
-    seedPatUsageLogs();
-    seedReports();
-    seedUserBlocks();
-    seedSubscriptions();
-    seedNotifications();
+    
+    // All other seed functions are temporarily disabled:
+    // seedAuth();
+    // seedForumCategories();
+    // seedForumThreads();
+    // seedForumPosts();
+    // seedMeetups();
+    // seedBuilds();
+    // seedAnnouncements();
+    // seedCommunityGuidelinesAcceptances();
+    // seedBuildComments();
+    // seedWikiComments();
+    // seedPersonalAccessTokens();
+    // seedPatUsageLogs();
+    // seedReports();
+    // seedUserBlocks();
+    // seedSubscriptions();
+    // seedNotifications();
 
     console.log("\n✅ Seed complete!");
   } catch (error) {
