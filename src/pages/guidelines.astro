@@ -131,16 +131,11 @@ const turnstileSiteKey = (env as App.Env).PUBLIC_TURNSTILE_SITE_KEY ?? "";
             </a>
           </div>
         ) : user ? (
-          <div class="acceptance-form">
+                    <div class="acceptance-form">
             <h2>Accept the Protocol</h2>
             <p class="acceptance-instructions">
-              Once you have read the directives above and completed the verification, 
-              initialize your acceptance below.
+              Once you have read the directives above, initialize your acceptance below.
             </p>
-
-            <div class="turnstile-container">
-              <div class="cf-turnstile" data-sitekey={turnstileSiteKey} data-callback="onTurnstileSuccess"></div>
-            </div>
 
             <button
               type="button"
@@ -154,7 +149,7 @@ const turnstileSiteKey = (env as App.Env).PUBLIC_TURNSTILE_SITE_KEY ?? "";
             <p id="error-msg" class="error-message" style="display: none;" role="alert"></p>
 
             <p class="acceptance-note">
-              This verification keeps the network secure from spam bots and ensures a high-signal environment.
+              This ensures a high-signal environment for our community.
             </p>
           </div>
         ) : (
@@ -196,12 +191,10 @@ const turnstileSiteKey = (env as App.Env).PUBLIC_TURNSTILE_SITE_KEY ?? "";
 </BaseLayout>
 
 <script define:vars={{ redirectTo }}>
-  // Scroll detection via Intersection Observer
   const sentinel = document.getElementById("scroll-sentinel");
   const acceptBtn = document.getElementById("accept-btn");
   const errorMsg = document.getElementById("error-msg");
   let scrolledToBottom = false;
-  let turnstileToken = null;
 
   function showError(message) {
     if (errorMsg) {
@@ -232,16 +225,10 @@ const turnstileSiteKey = (env as App.Env).PUBLIC_TURNSTILE_SITE_KEY ?? "";
     observer.observe(sentinel);
   }
 
-  // Turnstile callback
-  window.onTurnstileSuccess = (token) => {
-    turnstileToken = token;
-    hideError();
-    updateButtonState();
-  };
-
   function updateButtonState() {
     if (acceptBtn) {
-      if (scrolledToBottom && turnstileToken) {
+      // ONLY check if they scrolled. No CAPTCHA required.
+      if (scrolledToBottom) {
         acceptBtn.removeAttribute("disabled");
       } else {
         acceptBtn.setAttribute("disabled", "true");
@@ -249,14 +236,8 @@ const turnstileSiteKey = (env as App.Env).PUBLIC_TURNSTILE_SITE_KEY ?? "";
     }
   }
 
-  // Handle acceptance
   if (acceptBtn) {
     acceptBtn.addEventListener("click", async () => {
-      if (!turnstileToken) {
-        showError("Please complete the verification first.");
-        return;
-      }
-
       hideError();
       acceptBtn.setAttribute("disabled", "true");
       acceptBtn.textContent = "Processing...";
@@ -265,18 +246,14 @@ const turnstileSiteKey = (env as App.Env).PUBLIC_TURNSTILE_SITE_KEY ?? "";
         const res = await fetch("/api/guidelines/accept", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ turnstileToken }),
+          body: JSON.stringify({}), // Turnstile token removed
         });
 
         if (res.ok) {
           window.location.href = redirectTo;
         } else {
           const data = await res.json();
-          if (data.error === "turnstile_verification_failed") {
-            showError("Verification failed. Please retry.");
-          } else {
-            showError(data.error || "System error. Please retry.");
-          }
+          showError(data.error || "System error. Please retry.");
           acceptBtn.removeAttribute("disabled");
           acceptBtn.textContent = "I have read and accept these guidelines";
         }
